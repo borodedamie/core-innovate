@@ -1,103 +1,86 @@
+import BookAssessment from "@/components/modules/book-assessment";
+import Faqs from "@/components/modules/faqs";
+import OurServices from "@/components/modules/our-services";
+import OurValues from "@/components/modules/our-value";
+import Reviews from "@/components/modules/reviews";
+import SecureScalablePartner from "@/components/modules/secure-scalable-partner";
+import WhatSetsUsApart from "@/components/modules/what-sets-us-apart";
+import { Button } from "@/components/shared/button";
+import { MoveUpRight } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <div className="space-y-16">
+      <div
+        className="h-[685px] bg-no-repeat flex px-4 sm:px-8 lg:px-12 items-center bg-cover bg-center
+        bg-[linear-gradient(104.5deg,#16365F_44.07%,rgba(25,80,130,0.841779)_57.49%,rgba(35,157,234,0.22)_73.41%,#239DEA_94.11%),url('/home.jpg')]"
+      >
+        <div className="flex flex-col gap-y-6">
+          <span className="flex items-center gap-2 py-2.5 px-4 rounded-3xl bg-[#193D6B] text-white w-fit">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src={`/sparkle.svg`}
+              alt="sparkle icon"
+              width={16}
+              height={16}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+
+            <p className="text-sm">Top IT security company</p>
+          </span>
+
+          <div className="max-w-2xl space-y-4">
+            <h1 className="text-white font-dm-sans font-semibold text-4xl sm:text-5xl lg:text-6xl">
+              Tech made strong, business made simple.
+            </h1>
+            <p className="text-[#F9FAFB] max-w-[550px] text-base">
+              We deliver IT and cybersecurity solutions that protect your
+              business and support growth.
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-2 sm:items-center">
+            <Button className="w-fit" size="lg">Contact Us</Button>
+            <Button className="w-fit" size="lg" variant="white">
+              Book a free consultation
+              <span className="size-8 bg-primary flex items-center justify-center rounded-[72.73px]">
+                <MoveUpRight className="size-4 text-white" />
+              </span>
+            </Button>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <div className="flex -space-x-2">
+              <img
+                className="inline-block h-6 w-6 rounded-full ring-2 ring-white"
+                src="https://i.pravatar.cc/100?img=1"
+                alt=""
+              />
+              <img
+                className="inline-block h-6 w-6 rounded-full ring-2 ring-white"
+                src="https://i.pravatar.cc/100?img=2"
+                alt=""
+              />
+              <img
+                className="inline-block h-6 w-6 rounded-full ring-2 ring-white"
+                src="https://i.pravatar.cc/100?img=3"
+                alt=""
+              />
+            </div>
+
+            <p className="text-white text-xs">
+              <b className="text-xl">200+</b> Satisfied Customers
+            </p>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+
+      <OurServices />
+      <WhatSetsUsApart />
+      <SecureScalablePartner />
+      <Reviews />
+      <OurValues />
+      <Faqs />
+      <BookAssessment />
     </div>
   );
 }
