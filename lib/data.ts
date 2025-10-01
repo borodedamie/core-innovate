@@ -46,3 +46,59 @@ export const accordionData = [
       "It’s simple. Contact us through our website or book a free consultation. We’ll discuss your business needs, assess your current IT and security posture, and recommend the right solution tailored for you.",
   },
 ];
+
+export const individualProgrammes = [
+  {
+    title: "IT Fundamentals",
+    topics: [
+      "Introduction to computer systems and networking",
+      "Windows Server and Microsoft 365 basics",
+      "Troubleshooting and IT support essentials.",
+    ],
+  },
+  {
+    title: "Cybersecurity Foundations",
+    topics: [
+      "Threats, vulnerabilities, and cyber hygiene.",
+      "Security best practices for individuals and businesses",
+      "Introduction to SOC tools and monitoring",
+    ],
+  },
+  {
+    title: "Cybersecurity Foundations",
+    topics: [
+      "Understanding Microsoft Azure and AWS",
+      "Cloud concepts, architecture, and security fundamentals",
+      "Getting started with cloud certifications",
+    ],
+  },
+  {
+    title: "Advanced Cybersecurity",
+    topics: [
+      "Incident detection and response",
+      "Ethical hacking and penetration testing basics",
+      "Security operations and compliance frameworks",
+    ],
+  },
+];
+
+export const contacts = [
+  {
+    title: "Call Now",
+    description: "Call us on weekdays from 9 AM to 5 PM.",
+    contact: "+44 325 5687 35",
+    icon: "/call.svg",
+  },
+  {
+    title: "Email Address",
+    description: "Contact us by email ,we will respond.",
+    contact: "example@email.com",
+    icon: "/mail.svg",
+  },
+  {
+    title: "Office Address",
+    description: "Visit us at our headquarters.",
+    contact: "2464 Royal Ln. Mesa, New Jersey.",
+    icon: "/map-marker.svg",
+  },
+];

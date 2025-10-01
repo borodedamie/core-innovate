@@ -44,3 +44,13 @@ button {
 .swiper-pagination-bullet-active {
   @apply bg-indigo-500 opacity-100;
 }
+
+.title {
+  font-family: var(--font-dm-sans);
+  font-weight: 600;
+  color: var(--color-secondary);
+  font-size: 28px;
+  line-height: 120%;
+  letter-spacing: -2%;
+  vertical-align: middle;
+}

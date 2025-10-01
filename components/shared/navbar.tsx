@@ -20,7 +20,9 @@ const NavBar = () => {
         <Link href={"/about-us"}>About Us</Link>
       </div>
 
-      <Button size="lg">Contact Us</Button>
+      <Link href={`/contact-us`}>
+        <Button size="lg">Contact Us</Button>
+      </Link>
     </nav>
   );
 };
