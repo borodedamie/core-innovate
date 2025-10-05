@@ -1,13 +1,16 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import SectionBadge from "../shared/section-badge";
+import VerticalStepList from "../shared/vertical-steplist";
 
 const SoftwareDevelopment = () => {
   return (
     <div className="px-4 sm:px-8 bg-[#F5F5F5] relative py-16 space-y-12 lg:px-12">
       <div className="absolute inset-0 bg-[url('/vector-white.png')] bg-center bg-cover bg-no-repeat" />
 
-      <div className="text-center">
+      <div className="text-center relative z-10">
         <h3 className="text-secondary max-w-[486px] mx-auto text-[28px] font-semibold font-dm-sans">
           Web & Software Development Services
         </h3>
@@ -18,7 +21,7 @@ const SoftwareDevelopment = () => {
         </p>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-16">
+      <div className="grid lg:grid-cols-2 gap-16 relative z-10">
         <div className="space-y-6">
           <SectionBadge title="Why Choose CoreInnovate for Web development" />
 
@@ -31,9 +34,11 @@ const SoftwareDevelopment = () => {
               following
             </p>
           </div>
+
+          <VerticalStepList items={services} />
         </div>
 
-        <div className="relative h-[462px] rounded-2xl overflow-hidden">
+        <div className="relative h-[462px] sm:h-full rounded-2xl overflow-hidden">
           <Image fill className="object-cover" alt="team" src={`/team.jpg`} />
         </div>
       </div>
@@ -45,28 +50,28 @@ export default SoftwareDevelopment;
 
 const services = [
   {
-    title: "Tailored Solutions",
+    title: "Seamless Migration",
     description:
-      "We do not believe in one size fits all. Every project is designed around your business goals, workflows, and users to ensure maximum impact.",
+      "Move your workloads, applications, and data to the cloud with minimal disruption. We design and execute a clear migration plan that ensures a smooth transition from on-premise systems to Azure or AWS.",
   },
-
   {
-    title: "Modern and Scalable Technology",
-    description: "",
+    title: "Performance Optimisation",
+    description:
+      "We monitor and fine-tune your cloud environment to deliver speed, reliability, and scalability. Our experts continuously optimise workloads to keep your business running at peak performance.",
   },
-
   {
-    title: "End-to-End Development",
-    description: "",
+    title: "Cost Control and Transparency",
+    description:
+      "Cloud costs can spiral if unmanaged. We analyse your usage, remove waste, and right-size resources to ensure you only pay for what you need.",
   },
-
   {
-    title: "User-Focused Design",
-    description: "",
+    title: "Security and Compliance",
+    description:
+      "Your data is safe with us. We implement robust security frameworks, enforce best practices, and ensure compliance with industry regulations such as GDPR, ISO 27001, and HIPAA.",
   },
-
   {
-    title: "Ongoing Support and Maintenance",
-    description: "",
+    title: "Hybrid and Multi-Cloud Support",
+    description:
+      "Whether you are running Azure, AWS, or a hybrid mix, we manage complex environments with ease and ensure seamless integration with your on-premises systems.",
   },
 ];

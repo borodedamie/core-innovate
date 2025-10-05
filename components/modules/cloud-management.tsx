@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import SectionBadge from "../shared/section-badge";
+import VerticalStepList from "../shared/vertical-steplist";
 
 const CloudManagementServices = () => {
   return (
@@ -30,9 +31,11 @@ const CloudManagementServices = () => {
               following
             </p>
           </div>
+
+          <VerticalStepList items={services} />
         </div>
 
-        <div className="relative h-[462px] rounded-2xl overflow-hidden">
+        <div className="relative h-[462px] sm:h-full rounded-2xl overflow-hidden">
           <Image fill className="object-cover" alt="team" src={`/team.jpg`} />
         </div>
       </div>
@@ -48,24 +51,24 @@ const services = [
     description:
       "Move your workloads, applications, and data to the cloud with minimal disruption. We design and execute a clear migration plan that ensures a smooth transition from on-premise systems to Azure or AWS.",
   },
-
   {
     title: "Performance Optimisation",
-    description: "",
+    description:
+      "We monitor and fine-tune your cloud environment to deliver speed, reliability, and scalability. Our experts continuously optimise workloads to keep your business running at peak performance.",
   },
-
   {
     title: "Cost Control and Transparency",
-    description: "",
+    description:
+      "Cloud costs can spiral if unmanaged. We analyse your usage, remove waste, and right-size resources to ensure you only pay for what you need.",
   },
-
   {
     title: "Security and Compliance",
-    description: "",
+    description:
+      "Your data is safe with us. We implement robust security frameworks, enforce best practices, and ensure compliance with industry regulations such as GDPR, ISO 27001, and HIPAA.",
   },
-
   {
     title: "Hybrid and Multi-Cloud Support",
-    description: "",
+    description:
+      "Whether you are running Azure, AWS, or a hybrid mix, we manage complex environments with ease and ensure seamless integration with your on-premises systems.",
   },
 ];

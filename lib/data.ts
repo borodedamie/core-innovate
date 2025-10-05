@@ -102,3 +102,35 @@ export const contacts = [
     icon: "/map-marker.svg",
   },
 ];
+
+export const blogs = [
+  {
+    id: 1,
+    title: "The Importance of Cybersecurity in Business",
+    content:
+      "Cybersecurity is crucial for businesses of all sizes. Learn how to protect your data, network, and systems from cyber threats.",
+    image: "/article-image.jpg",
+    tags: ["Managed IT", "Business"],
+    date: "August 25, 2025",
+  },
+
+  {
+    id: 2,
+    title: "How to Protect Your Business from Cyber Attacks",
+    content:
+      "Cyber attacks can happen at any time, and you need to be prepared. Learn how to protect your business from cyber attacks.",
+    image: "/article-image.jpg",
+    tags: ["Managed IT", "Business"],
+    date: "August 25, 2025",
+  },
+
+  {
+    id: 3,
+    title: "The Importance of Cybersecurity in Business",
+    content:
+      "Cybersecurity is crucial for businesses of all sizes. Learn how to protect your data, network, and systems from cyber threats.",
+    image: "/article-image.jpg",
+    tags: ["Managed IT", "Business"],
+    date: "August 25, 2025",
+  },
+];
