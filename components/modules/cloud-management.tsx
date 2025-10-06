@@ -23,10 +23,10 @@ const CloudManagementServices = () => {
           <SectionBadge title="Why Choose CoreInnovate for Cloud Management" />
 
           <div>
-            <h3 className="text-secondary max-w-[396px] text-[28px] font-semibold font-dm-sans">
+            <h3 className="text-secondary lg:max-w-[396px] text-[28px] font-semibold font-dm-sans">
               We help you simplify, secure, & scale.
             </h3>
-            <p className="text-tertiary max-w-[436px] text-base font-medium">
+            <p className="text-tertiary lg:max-w-[436px] text-base font-medium">
               Our Cloud Management Services provides your business with the
               following
             </p>

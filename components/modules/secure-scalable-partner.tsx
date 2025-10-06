@@ -44,7 +44,7 @@ const SecureScalablePartner = () => {
           </div>
         </div>
 
-        <div className="relative w-full h-full overflow-hidden rounded-2xl">
+        <div className="relative w-full h-[543px] lg:h-full overflow-hidden rounded-2xl">
           <Image
             alt="partners"
             fill

@@ -4,7 +4,7 @@ import { MoveUpRight } from "lucide-react";
 
 const BookAssessment = () => {
   return (
-    <div className="relative bg-dark rounded-3xl mx-auto lg:max-w-[75%] h-[397px] flex items-center px-4 sm:px-8 lg:px-12 overflow-hidden">
+    <div className="relative bg-dark rounded-3xl mx-auto max-w-11/12 px-4 sm:px-8 lg:max-w-[75%] h-[397px] flex items-center lg:px-12 overflow-hidden">
       <div className="absolute inset-0 bg-[url('/vector-2.png')] bg-center bg-cover bg-no-repeat" />
 
       <div className="relative text-white text-center w-full flex flex-col items-center gap-6">

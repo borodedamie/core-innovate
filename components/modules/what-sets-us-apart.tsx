@@ -5,7 +5,9 @@ import { MoveRight } from "lucide-react";
 const WhatSetsUsApart = () => {
   return (
     <div className="px-4 sm:px-8 lg:px-12 flex flex-col lg:flex-row items-center gap-12 py-16 bg-dark">
-      <Image src={"/training.png"} alt="training" width={549} height={493} />
+      <div className="relative overflow-hidden rounded-2xl w-full h-[493px] lg:h-auto">
+        <Image src={"/training.png"} className="object-cover" alt="training" fill />
+      </div>
 
       <div className="space-y-6">
         <div className="flex items-center gap-2 text-xs font-medium text-white">
