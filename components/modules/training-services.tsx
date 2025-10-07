@@ -18,7 +18,7 @@ const TrainingServices = () => {
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-6 gap-9">
-        {trainings.map((training, index) => (
+        {trainings.map((training) => (
           <div
             key={training.Feature}
             className={cn(

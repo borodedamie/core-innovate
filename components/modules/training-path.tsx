@@ -1,7 +1,6 @@
 import { individualProgrammes } from "@/lib/data";
-import { cn } from "@/lib/utils";
-import { CheckCircle, CircleCheck } from "lucide-react";
-import Image from "next/image";
+import { CircleCheck } from "lucide-react";
+
 import React from "react";
 
 const TrainingPath = () => {
@@ -88,35 +87,3 @@ const TrainingPath = () => {
 
 export default TrainingPath;
 
-const trainings = [
-  {
-    image: "/lock.svg",
-    Feature: "Beginner Friendly",
-    Description:
-      "We start from the basics, making sure even those without a technical background can follow along and build a strong foundation.",
-  },
-  {
-    image: "/check-circle.svg",
-    Feature: "Hands-On Learning",
-    Description:
-      "Our courses go beyond theory. You'll work on practical labs, real-world scenarios, and projects that give you experience employers value.",
-  },
-  {
-    image: "/gem.svg",
-    Feature: "Certification-Focused",
-    Description:
-      "We prepare you for industry-recognised certifications such as CompTIA A+, Network+, Security+, Microsoft Azure Fundamentals, and AWS Cloud Practitioner.",
-  },
-  {
-    image: "/user-group.svg",
-    Feature: "Mentoring and Career Guidance",
-    Description:
-      "We strive for high standards in service delivery, ensuring quality, reliability, and results.",
-  },
-  {
-    image: "/book-open.svg",
-    Feature: "Flexible Learning Options",
-    Description:
-      "Choose from online, instructor-led, or blended programs designed to fit around your schedule.",
-  },
-];

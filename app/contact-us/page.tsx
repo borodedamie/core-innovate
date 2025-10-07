@@ -18,7 +18,7 @@ const page = () => {
 
         <div className="grid gap-6 sm:grid-cols-3">
           {contacts.map((contact) => (
-            <div className="p-6 bg-[#F9FAFB] rounded-2xl space-y-16">
+            <div key={contact.title} className="p-6 bg-[#F9FAFB] rounded-2xl space-y-16">
               <span className="size-16 bg-white rounded-full inline-flex items-center justify-center">
                 <Image width={32} height={32} alt="icon" src={contact.icon} />
               </span>

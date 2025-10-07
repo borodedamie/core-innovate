@@ -50,20 +50,26 @@ export default function Home() {
 
           <div className="flex items-center gap-3">
             <div className="flex -space-x-2">
-              <img
+              <Image
                 className="inline-block h-6 w-6 rounded-full ring-2 ring-white"
                 src="https://i.pravatar.cc/100?img=1"
                 alt=""
+                width={24}
+                height={24}
               />
-              <img
+              <Image
                 className="inline-block h-6 w-6 rounded-full ring-2 ring-white"
                 src="https://i.pravatar.cc/100?img=2"
                 alt=""
+                width={24}
+                height={24}
               />
-              <img
+              <Image
                 className="inline-block h-6 w-6 rounded-full ring-2 ring-white"
                 src="https://i.pravatar.cc/100?img=3"
                 alt=""
+                width={24}
+                height={24}
               />
             </div>
 

@@ -11,8 +11,8 @@ const ReviewComponent = () => {
     >
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-0.5">
-          {Array.from({ length: 5 }).map((_, index) => (
-            <Image src={"/star.svg"} alt="star" width={20} height={20} />
+          {Array.from({ length: 5 }).map((_,index) => (
+            <Image key={index} src={"/star.svg"} alt="star" width={20} height={20} />
           ))}
         </div>
 

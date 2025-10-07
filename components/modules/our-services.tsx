@@ -1,6 +1,5 @@
 import React from "react";
 import SectionBadge from "../shared/section-badge";
-import Image from "next/image";
 import ServiceCard from "../ui/service-card";
 import { Button } from "../shared/button";
 import { MoveRight } from "lucide-react";

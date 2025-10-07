@@ -8,7 +8,6 @@ import {
   BreadcrumbList,
 } from "@/components/ui/breadcrumb";
 import { cn } from "@/lib/utils";
-import { SlashIcon } from "lucide-react";
 import Image from "next/image";
 
 const page = () => {

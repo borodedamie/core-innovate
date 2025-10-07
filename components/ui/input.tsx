@@ -5,7 +5,6 @@ import { cn } from "@/lib/utils";
 function Input({
   className,
   label,
-  error,
   type,
   ...props
 }: React.ComponentProps<"input"> & { label?: string; error?: string }) {
