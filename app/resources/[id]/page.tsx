@@ -46,6 +46,7 @@ const page = () => {
           <div className="flex items-center gap-2 flex-wrap">
             {["Security", "Cloud", "IT", "Business"].map((tag, index) => (
               <Badge
+                key={index}
                 className={cn(
                   {
                     "text-[#CC400C] border-[#FCB59A] bg-[#FFECE5]":
