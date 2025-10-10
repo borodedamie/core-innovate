@@ -86,7 +86,7 @@ export const contacts = [
   {
     title: "Call Now",
     description: "Call us on weekdays from 9 AM to 5 PM.",
-    contact: "+44 325 5687 35",
+    contact: "+1452222192",
     icon: "/call.svg",
   },
   {
@@ -98,7 +98,8 @@ export const contacts = [
   {
     title: "Office Address",
     description: "Visit us at our headquarters.",
-    contact: "2464 Royal Ln. Mesa, New Jersey.",
+    contact:
+      "Suite 248, Corinium House, Barnwood Business Park, Gloucester, GL4 3HX, United Kingdom",
     icon: "/map-marker.svg",
   },
 ];

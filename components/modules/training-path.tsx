@@ -29,8 +29,8 @@ const TrainingPath = () => {
           </div>
 
           <div className="flex flex-col gap-y-6">
-            {individualProgrammes.map((programme) => (
-              <div className="flex gap-2" key={programme.title}>
+            {individualProgrammes.map((programme, index) => (
+              <div className="flex gap-2" key={index}>
                 <CircleCheck className="size-5 text-primary" />
                 <div className="space-y-2">
                   <p className="font-medium text-secondary text-lg">
@@ -61,8 +61,8 @@ const TrainingPath = () => {
           </div>
 
           <div className="flex flex-col gap-y-6">
-            {individualProgrammes.map((programme) => (
-              <div className="flex gap-2" key={programme.title}>
+            {individualProgrammes.map((programme, index) => (
+              <div className="flex gap-2" key={index}>
                 <CircleCheck className="size-5 text-white fill-primary" />
                 <div className="space-y-2">
                   <p className="font-medium text-secondary text-lg">

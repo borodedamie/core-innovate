@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="space-y-16">
       <div
-        className="h-[685px] bg-no-repeat flex px-4 sm:px-8 lg:px-12 items-center bg-cover bg-center
+        className="h-[685px] hero bg-no-repeat flex px-4 sm:px-8 lg:px-12 items-center bg-cover bg-center
         bg-[linear-gradient(104.5deg,#16365F_44.07%,rgba(25,80,130,0.841779)_57.49%,rgba(35,157,234,0.22)_73.41%,#239DEA_94.11%),url('/home.jpg')]"
       >
         <div className="flex flex-col gap-y-6">

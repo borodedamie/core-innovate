@@ -35,7 +35,7 @@ const SoftwareDevelopment = () => {
             </p>
           </div>
 
-          <VerticalStepList items={services} />
+          <VerticalStepList key={'software'} items={services} />
         </div>
 
         <div className="relative h-[462px] sm:h-full rounded-2xl overflow-hidden">

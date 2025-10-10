@@ -52,8 +52,8 @@ const Founder = () => {
           <Image
             fill
             className="object-cover"
-            alt="values"
-            src={"/values.jpg"}
+            alt="mike folorunsho"
+            src={"/founder.jpg"}
           />
         </div>
       </div>

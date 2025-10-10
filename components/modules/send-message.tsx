@@ -14,7 +14,7 @@ import { Button } from "../shared/button";
 const SendMessage = () => {
   return (
     <div className="bg-[#F9FAFB] grid gap-12 lg:grid-cols-2 rounded-2xl p-6">
-      <div className="relative h-[698px] lg:h-full w-full">
+      <div className="relative h-[398px] lg:h-full w-full">
         <Image
           src={`/support.jpg`}
           className="rounded-2xl object-cover"

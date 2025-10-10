@@ -18,7 +18,7 @@ const CloudManagementServices = () => {
         </p>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-16">
+      <div className="grid lg:grid-cols-2 gap-16 relative z-10">
         <div className="space-y-6">
           <SectionBadge title="Why Choose CoreInnovate for Cloud Management" />
 
@@ -32,7 +32,7 @@ const CloudManagementServices = () => {
             </p>
           </div>
 
-          <VerticalStepList items={services} />
+          <VerticalStepList key={'cloud'} items={services} />
         </div>
 
         <div className="relative h-[462px] sm:h-full rounded-2xl overflow-hidden">

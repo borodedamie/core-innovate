@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { PlusIcon, MinusIcon } from "lucide-react";
 
 interface AccordionItem {
@@ -6,13 +6,15 @@ interface AccordionItem {
   question: string;
   answer: string;
 }
-
 interface AccordionProps {
   items: AccordionItem[];
 }
 
 const Accordion: React.FC<AccordionProps> = ({ items }) => {
   const [openItem, setOpenItem] = useState<string | number | null>(null);
+  const contentRefs = useRef<Record<string | number, HTMLDivElement | null>>(
+    {}
+  );
 
   const toggleItem = (id: string | number) => {
     setOpenItem((prev) => (prev === id ? null : id));
@@ -43,9 +45,15 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
             </button>
 
             <div
-              className={`overflow-hidden transition-[max-height] duration-500 ease-in-out ${
-                isOpen ? "max-h-40 mt-2" : "max-h-0"
-              }`}
+              ref={(el) => {
+                contentRefs.current[id] = el;
+              }}
+              style={{
+                maxHeight: isOpen
+                  ? contentRefs.current[id]?.scrollHeight + "px"
+                  : "0px",
+              }}
+              className="overflow-hidden transition-[max-height] duration-500 ease-in-out mt-2"
             >
               <p className="text-tertiary font-dm-sans text-base font-medium">
                 {answer}
