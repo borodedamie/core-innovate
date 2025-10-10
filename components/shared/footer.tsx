@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div className="px-4 sm:px-8 lg:px-12 space-y-16 pt-16">
       <div className="grid gap-6 lg:grid-cols-3">
-        <div className="col-span-1 space-y-6">
+        <div className="col-span-1 flex flex-col gap-y-6">
           <Link href={`/`}>
             <Image
               src={`/logo-white.png`}
@@ -36,13 +36,13 @@ const Footer = () => {
           <div className="space-y-6">
             <p className="text-base text-[#98A2B3]">Company</p>
 
-            <div className="space-y-4 hover:underline text-base text-[#667185] font-medium">
+            <div className="space-y-4 text-base text-[#667185] font-medium">
               <Link href={`/about-us`}>
-                <p>About</p>
+                <p className="hover:underline">About</p>
               </Link>
-              <p>Security</p>
-              <p>Partnerships</p>
-              <p>Community</p>
+              <p className="hover:underline">Security</p>
+              <p className="hover:underline">Partnerships</p>
+              <p className="hover:underline">Community</p>
             </div>
           </div>
 
@@ -50,12 +50,12 @@ const Footer = () => {
             <p className="text-base text-[#98A2B3]">Services</p>
 
             <Link href={`/services`}>
-              <div className="space-y-4 text-base hover:underline text-[#667185] font-medium">
-                <p>Managed IT & Security</p>
-                <p>Cloud Solutions</p>
-                <p>Development & Digital</p>
-                <p>Project Excellence</p>
-                <p>Training Services</p>
+              <div className="space-y-4 text-base text-[#667185] font-medium">
+                <p className="hover:underline">Managed IT & Security</p>
+                <p className="hover:underline">Cloud Solutions</p>
+                <p className="hover:underline">Development & Digital</p>
+                <p className="hover:underline">Project Excellence</p>
+                <p className="hover:underline">Training Services</p>
               </div>
             </Link>
           </div>
@@ -63,14 +63,14 @@ const Footer = () => {
           <div className="space-y-6">
             <p className="text-base text-[#98A2B3]">Resources</p>
 
-            <div className="space-y-4 hover:underline text-base text-[#667185] font-medium">
+            <div className="space-y-4 text-base text-[#667185] font-medium">
               <Link href={`/resources`}>
                 {" "}
-                <p>Blog / Insights / Guides</p>
+                <p className="hover:underline">Blog / Insights / Guides</p>
               </Link>
-              <p>Case Studies</p>
-              <p>FAQ</p>
-              <p>Certifications & Partnerships</p>
+              <p className="hover:underline">Case Studies</p>
+              <p className="hover:underline">FAQ</p>
+              <p className="hover:underline">Certifications & Partnerships</p>
             </div>
           </div>
         </div>
@@ -78,10 +78,10 @@ const Footer = () => {
 
       <div className="border-t flex flex-wrap gap-6 items-center justify-between border-[#E4E7EC] py-8">
         <div className="flex flex-wrap text-sm font-medium text-[#667185] items-center gap-8">
-          <p>Terms of Service</p>
-          <p>Privacy Policy</p>
-          <p>Security</p>
-          <p>Site Map</p>
+          <p className="hover:underline">Terms of Service</p>
+          <p className="hover:underline">Privacy Policy</p>
+          <p className="hover:underline">Security</p>
+          <p className="hover:underline">Site Map</p>
         </div>
 
         <p className="text-sm text-[#98A2B3]">© 2025. All rights reserved.</p>
