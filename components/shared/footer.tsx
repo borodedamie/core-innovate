@@ -1,18 +1,21 @@
 import Image from "next/image";
 import React from "react";
 import { Button } from "./button";
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <div className="px-4 sm:px-8 lg:px-12 space-y-16 pt-16">
       <div className="grid gap-6 lg:grid-cols-3">
         <div className="col-span-1 space-y-6">
-          <Image
-            src={`/logo-white.png`}
-            width={107}
-            height={68}
-            alt="coreinnovate logo"
-          />
+          <Link href={`/`}>
+            <Image
+              src={`/logo-white.png`}
+              width={107}
+              height={68}
+              alt="coreinnovate logo"
+            />
+          </Link>
 
           <div className="space-y-6">
             <p className="text-[#344054] text-base">
@@ -33,8 +36,10 @@ const Footer = () => {
           <div className="space-y-6">
             <p className="text-base text-[#98A2B3]">Company</p>
 
-            <div className="space-y-4 text-base text-[#667185] font-medium">
-              <p>About</p>
+            <div className="space-y-4 hover:underline text-base text-[#667185] font-medium">
+              <Link href={`/about-us`}>
+                <p>About</p>
+              </Link>
               <p>Security</p>
               <p>Partnerships</p>
               <p>Community</p>
@@ -44,20 +49,25 @@ const Footer = () => {
           <div className="space-y-6">
             <p className="text-base text-[#98A2B3]">Services</p>
 
-            <div className="space-y-4 text-base text-[#667185] font-medium">
-              <p>Managed IT & Security</p>
-              <p>Cloud Solutions</p>
-              <p>Development & Digital</p>
-              <p>Project Excellence</p>
-              <p>Training Services</p>
-            </div>
+            <Link href={`/services`}>
+              <div className="space-y-4 text-base hover:underline text-[#667185] font-medium">
+                <p>Managed IT & Security</p>
+                <p>Cloud Solutions</p>
+                <p>Development & Digital</p>
+                <p>Project Excellence</p>
+                <p>Training Services</p>
+              </div>
+            </Link>
           </div>
 
           <div className="space-y-6">
             <p className="text-base text-[#98A2B3]">Resources</p>
 
-            <div className="space-y-4 text-base text-[#667185] font-medium">
-              <p>Blog / Insights / Guides</p>
+            <div className="space-y-4 hover:underline text-base text-[#667185] font-medium">
+              <Link href={`/resources`}>
+                {" "}
+                <p>Blog / Insights / Guides</p>
+              </Link>
               <p>Case Studies</p>
               <p>FAQ</p>
               <p>Certifications & Partnerships</p>
