@@ -21,7 +21,7 @@ const OurValues = () => {
         </div>
       </div>
 
-      <div className="relative h-[564px] w-full bg-center lg:h-auto overflow-hidden rounded-2xl">
+      <div className="relative h-[500px] w-full bg-center overflow-hidden rounded-2xl">
         <Image src="/founder.jpg" className="object" alt="values" fill />
       </div>
     </div>

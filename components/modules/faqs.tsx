@@ -7,7 +7,7 @@ import { accordionData } from "@/lib/data";
 
 const Faqs = () => {
   return (
-    <div className="px-4 sm:px-8 flex bg-[url('/vector.png')] bg-cover bg-center bg-no-repeat flex-col gap-y-6 w-full items-center py-16 lg:px-12">
+    <div className="px-4 sm:px-8 hidden bg-[url('/vector.png')] bg-cover bg-center bg-no-repeat flex-col gap-y-6 w-full items-center py-16 lg:px-12">
       <SectionBadge title="FAQS" />
 
       <div>

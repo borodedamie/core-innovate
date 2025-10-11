@@ -134,4 +134,14 @@ export const blogs = [
     tags: ["Managed IT", "Business"],
     date: "August 25, 2025",
   },
+
+  {
+    id: 4,
+    title: "The Importance of Cybersecurity in Business",
+    content:
+      "Cybersecurity is crucial for businesses of all sizes. Learn how to protect your data, network, and systems from cyber threats.",
+    image: "/article-image.jpg",
+    tags: ["Managed IT", "Business"],
+    date: "August 25, 2025",
+  },
 ];

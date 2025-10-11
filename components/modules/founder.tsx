@@ -7,7 +7,7 @@ const Founder = () => {
     <div className="px-4 space-y-6 sm:px-8 lg:px-12">
       <SectionBadge title="Founder & Information Security Leader" />
 
-      <div className="grid lg:grid-cols-2 gap-12">
+      <div className="grid lg:grid-cols-2 justify-center items-center gap-12">
         <div className="space-y-6">
           <h3 className="title">About Mike Folley</h3>
 
@@ -48,12 +48,13 @@ const Founder = () => {
           </div>
         </div>
 
-        <div className="relative overflow-hidden h-[559px] lg:h-full w-full rounded-2xl">
+        <div className="w-full overflow-hidden rounded-2xl">
           <Image
-            fill
-            className="object-cover"
+            src="/founder.jpg"
             alt="mike folorunsho"
-            src={"/founder.jpg"}
+            width={443}
+            height={559}
+            className="w-full h-auto lg:h-[780px] rounded-2xl object-cover"
           />
         </div>
       </div>
