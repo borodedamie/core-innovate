@@ -3,6 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #475367;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --webkit-font-smoothing: antialiased;
+  -moz-osx-font-smooothing: antialiased;
 }
 
 @theme inline {
