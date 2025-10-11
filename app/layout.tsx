@@ -5,6 +5,7 @@ import NavBar from "@/components/shared/navbar";
 import "swiper/css";
 import "swiper/css/pagination";
 import Footer from "@/components/shared/footer";
+import { Toaster } from "@/components/ui/sonner";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
         <NavBar />
         {children}
         <Footer />
+        <Toaster position="top-center" />
       </body>
     </html>
   );

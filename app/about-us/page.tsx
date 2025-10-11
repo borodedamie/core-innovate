@@ -8,7 +8,7 @@ import Image from "next/image";
 const page = () => {
   return (
     <div className="space-y-16">
-      <div className="bg-dark hero h-[497px] flex items-center px-4 sm:px-8 lg:px-12">
+      <div className="bg-dark hero h-[640px] flex items-center px-4 sm:px-8 lg:px-12">
         <div className="relative text-white bg-[url('/services-hero.png')] bg-cover bg-center text-center w-full flex flex-col items-center gap-6">
           <p className="text-4xl max-w-[600px] font-semibold font-dm-sans">
             Building Stronger Businesses Through Technology

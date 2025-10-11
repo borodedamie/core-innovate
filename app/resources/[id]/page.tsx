@@ -12,7 +12,7 @@ import Image from "next/image";
 
 const page = () => {
   return (
-    <div className="pt-40 px-4 sm:px-8 lg:px-12 space-y-16">
+    <div className="pt-64 px-4 sm:px-8 lg:px-12 space-y-16">
       <div className="grid lg:grid-cols-2 justify-between items-center gap-6">
         <div className="relative w-full h-[476px] lg:h-full rounded-lg overflow-hidden">
           <Image src={`/popular.jpg`} fill className="object-cover" alt="hand holding cloud system" />

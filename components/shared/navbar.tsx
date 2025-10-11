@@ -11,28 +11,8 @@ import { usePathname } from "next/navigation";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
 
   const location = usePathname();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const heroSection = document.querySelector(".hero");
-
-      if (heroSection) {
-        const heroBottom =
-          (heroSection as HTMLElement).offsetTop +
-          (heroSection as HTMLElement).offsetHeight;
-        setScrolled(scrollY > heroBottom);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
@@ -47,54 +27,75 @@ const NavBar = () => {
 
   return (
     <div className="relative">
-      <nav
-        className={cn(
-          "flex items-center fixed w-full py-4 sm:py-6 px-4 sm:px-8 lg:px-12 justify-between z-50",
-          scrolled ? "bg-dark" : "",
-          { "bg-white shadow-2xs": location === "/contact-us" }
-        )}
-      >
-        <Link href={`/`}>
-          <Image
-            src={location === "/contact-us" ? `/logo-white.png` : `/logo.png`}
-            width={107}
-            height={68}
-            alt="core innovate logo"
-          />
-        </Link>
-
-        <div
+      <div className="fixed w-full z-50">
+        <nav
           className={cn(
-            "hidden lg:flex items-center bg-[#193D6B] py-4 px-10 rounded-[40px] text-base text-white font-dm-sans font-medium gap-8",
-            { "bg-[#F7F9FC] text-[#101928]": location === "/contact-us" }
+            "flex items-center bg-dark py-4 sm:pt-6 sm:pb-4 px-4 sm:px-8 lg:px-12 justify-between z-50",
+            { "bg-white shadow-2xs": location === "/contact-us" }
           )}
         >
-          <Link className={linkClasses("/services")} href={"/services"}>
-            Services
+          <Link href={`/`}>
+            <Image
+              src={location === "/contact-us" ? `/logo-white.png` : `/logo.png`}
+              width={107}
+              height={68}
+              alt="core innovate logo"
+            />
           </Link>
-          <Link className={linkClasses("/resources")} href={"/resources"}>
-            Resources
-          </Link>
-          <Link className={linkClasses("/about-us")} href={"/about-us"}>
-            About Us
-          </Link>
-        </div>
 
-        <div className="hidden lg:block">
-          <Link href={`/contact-us`}>
-            <Button size="lg">Contact Us</Button>
-          </Link>
-        </div>
+          <div
+            className={cn(
+              "hidden lg:flex items-center text-base text-white font-dm-sans font-medium gap-8",
+              { "text-[#101928]": location === "/contact-us" }
+            )}
+          >
+            {/* <Link className={linkClasses("/services")} href={"/services"}>
+              Services
+            </Link> */}
+            <Link className={linkClasses("/resources")} href={"/resources"}>
+              Resources
+            </Link>
+            <Link className={linkClasses("/about-us")} href={"/about-us"}>
+              About Us
+            </Link>
 
-        <div className="lg:hidden">
-          <Hamburger
-            toggled={isOpen}
-            toggle={setIsOpen}
-            color={location === "/contact-us" ? "#101928" : "#fff"}
-            size={24}
-          />
+            <Link href={`/contact-us`}>
+              <Button size="lg">Contact Us</Button>
+            </Link>
+          </div>
+
+          <div className="lg:hidden">
+            <Hamburger
+              toggled={isOpen}
+              toggle={setIsOpen}
+              color={location === "/contact-us" ? "#101928" : "#fff"}
+              size={24}
+            />
+          </div>
+        </nav>
+        <div
+          className={cn(
+            "bg-dark pb-4 shadow-2xs px-4 sm:px-8 lg:px-12 hidden lg:flex items-center gap-3 justify-end",
+            { "bg-white": location === "/contact-us" }
+          )}
+        >
+          {services.map((service) => (
+            <Link
+              key={service}
+              className={cn(
+                "text-xs font-dm-sans hover:text-white hover:underline font-medium text-white/70",
+                {
+                  "text-[#101928]/70 hover:text-[#101928]":
+                    location === "/contact-us",
+                }
+              )}
+              href={`/services`}
+            >
+              {service}
+            </Link>
+          ))}
         </div>
-      </nav>
+      </div>
 
       <AnimatePresence>
         {isOpen && (
@@ -128,13 +129,23 @@ const NavBar = () => {
               transition={{ delay: 0.2 }}
               className="space-y-8 flex flex-col items-center"
             >
-              <Link
+              {services.map((service) => (
+                <Link
+                  key={service}
+                  onClick={() => setIsOpen(false)}
+                  href={`/services`}
+                >
+                  {service}
+                </Link>
+              ))}
+
+              {/* <Link
                 href={"/services"}
                 className={linkClasses("/services")}
                 onClick={() => setIsOpen(false)}
               >
                 Services
-              </Link>
+              </Link> */}
               <Link
                 href={"/resources"}
                 className={linkClasses("/resources")}
@@ -162,3 +173,12 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
+const services = [
+  "Managed IT Services",
+  "Cloud Management",
+  "Managed Security",
+  "Project Management",
+  "Software Development",
+  "Project Risk",
+];

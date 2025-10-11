@@ -27,14 +27,21 @@ const Reviews = () => {
           slidesPerView={1}
           spaceBetween={24}
           className="pb-10"
+          autoHeight={false}
           pagination={{
             clickable: true,
             el: ".custom-pagination",
           }}
         >
-          {[1, 2, 3, 4, 5].map((_, index) => (
-            <SwiperSlide className="!w-[360px]" key={index}>
-              <ReviewComponent key={index} />
+          {testimonials.map((testimonial) => (
+            <SwiperSlide
+              key={testimonial.id}
+              style={{
+                height: "-webkit-fill-available",
+              }}
+              className="!w-[360px] items-stretch flex"
+            >
+              <ReviewComponent {...testimonial} />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -46,3 +53,33 @@ const Reviews = () => {
 };
 
 export default Reviews;
+
+const testimonials = [
+  {
+    id: 1,
+    title: "Top-notch cyber security and compliance support",
+    name: "Mike O.",
+    position: "Director, Excellis Care Group Ltd",
+    rating: 5,
+    content:
+      "We were struggling with data security and compliance. Core Innovate guided us through Cyber Essentials certification and set up stronger protection for our systems. They made the process smooth and stress-free. Now our clients trust us more, and we feel safer from threats.",
+  },
+  {
+    id: 2,
+    title: "Brilliant website that reflects our brand perfectly",
+    name: "Ola O.",
+    position: "Founder, 7th Care",
+    rating: 4,
+    content:
+      "Core Innovate built our website from scratch and nailed the look we wanted. It’s clean, fast, and works beautifully on mobile. They didn’t just build a site, they helped us understand how to attract customers online. We’ve seen a big jump in inquiries since launch.",
+  },
+  {
+    id: 3,
+    title: "Reliable IT partner that gives us peace of mind",
+    name: "Augustina S.",
+    position: "Director, Statecare Solutions",
+    rating: 5,
+    content:
+      "Core Innovate transformed how we manage our IT. Their team is quick to respond and always explains things in plain English. Since moving to their managed support, downtime has dropped to nearly zero, and our staff can work without constant tech issues. It’s like having our own IT department.",
+  },
+];
