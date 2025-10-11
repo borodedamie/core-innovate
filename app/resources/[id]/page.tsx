@@ -15,7 +15,7 @@ const page = () => {
     <div className="pt-40 px-4 sm:px-8 lg:px-12 space-y-16">
       <div className="grid lg:grid-cols-2 justify-between items-center gap-6">
         <div className="relative w-full h-[476px] lg:h-full rounded-lg overflow-hidden">
-          <Image src={`/popular.jpg`} fill alt="hand holding cloud system" />
+          <Image src={`/popular.jpg`} fill className="object-cover" alt="hand holding cloud system" />
         </div>
 
         <div className="grid gap-y-4">

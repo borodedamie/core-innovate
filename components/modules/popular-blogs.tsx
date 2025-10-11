@@ -16,7 +16,7 @@ const PopularBlogs = () => {
 
       <div className="grid lg:grid-cols-2 justify-between items-center gap-6">
         <div className="relative w-full h-[476px] rounded-lg overflow-hidden">
-          <Image src={`/popular.jpg`} fill alt="hand holding cloud system" />
+          <Image src={`/popular.jpg`} fill className="object-cover" alt="hand holding cloud system" />
         </div>
 
         <div className="grid gap-y-6">
