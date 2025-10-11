@@ -17,7 +17,7 @@ const ProjectRisk = () => {
         </p>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-16">
+      <div className="grid lg:grid-cols-2 gap-16 items-center">
         <div className="space-y-6">
           <SectionBadge title="WHY CHOOSE OUR rISK MANAGEMENT service" />
 
@@ -46,7 +46,7 @@ const ProjectRisk = () => {
         </div>
 
         <div className="relative h-[462px] rounded-2xl overflow-hidden">
-          <Image fill className="object-cover" alt="team" src={`/team.jpg`} />
+          <Image fill className="object-cover" alt="project-risk" src={`/project-risk.jpg`} />
         </div>
       </div>
     </div>

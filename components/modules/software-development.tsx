@@ -39,7 +39,7 @@ const SoftwareDevelopment = () => {
         </div>
 
         <div className="relative h-[462px] sm:h-full rounded-2xl overflow-hidden">
-          <Image fill className="object-cover" alt="team" src={`/team.jpg`} />
+          <Image fill className="object-cover" alt="web-dev" src={`/web-dev.jpg`} />
         </div>
       </div>
     </div>
