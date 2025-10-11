@@ -8,6 +8,7 @@ import WhatSetsUsApart from "@/components/modules/what-sets-us-apart";
 import { Button } from "@/components/shared/button";
 import { MoveUpRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -39,7 +40,11 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-2 sm:items-center">
-            <Button className="w-fit" size="lg">Contact Us</Button>
+            <Link href={`/contact-us`}>
+              <Button className="w-fit" size="lg">
+                Contact Us
+              </Button>
+            </Link>
             <Button className="w-fit" size="lg" variant="white">
               Book a free consultation
               <span className="size-8 bg-primary flex items-center justify-center rounded-[72.73px]">

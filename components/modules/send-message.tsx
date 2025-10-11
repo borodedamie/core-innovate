@@ -110,12 +110,14 @@ const SendMessage = () => {
           <Input
             label="First Name"
             placeholder="First Name"
+            name="First Name"
             value={formData.firstName}
             onChange={(e) => handleInputChange("firstName", e.target.value)}
             required
           />
           <Input
             label="Last Name"
+            name="Last Name"
             placeholder="Last Name"
             value={formData.lastName}
             onChange={(e) => handleInputChange("lastName", e.target.value)}
@@ -124,6 +126,7 @@ const SendMessage = () => {
           <Input
             label="Phone Number"
             type="tel"
+            name="Phone Number"
             placeholder="Phone Number"
             value={formData.phone}
             onChange={(e) => handleInputChange("phone", e.target.value)}
@@ -132,6 +135,7 @@ const SendMessage = () => {
           <Input
             label="Email Address"
             type="email"
+            name="Email Address"
             placeholder="Email Address"
             value={formData.email}
             onChange={(e) => handleInputChange("email", e.target.value)}
@@ -139,11 +143,13 @@ const SendMessage = () => {
           />
           <Input
             label="Company Name"
+            name="Company Name"
             placeholder="Company Name"
             value={formData.companyName}
             onChange={(e) => handleInputChange("companyName", e.target.value)}
           />
           <Select
+            name="Service"
             onValueChange={(value) => handleInputChange("service", value)}
           >
             <SelectTrigger label="Services" className="!p-6">
@@ -168,6 +174,7 @@ const SendMessage = () => {
 
           <div className="col-span-2 space-y-12">
             <Textarea
+              name="Message"
               label="Message"
               className="!h-[133px]"
               placeholder="Enter message..."

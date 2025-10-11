@@ -108,12 +108,14 @@ const NavBar = () => {
             className="fixed top-0 left-0 w-full h-screen bg-dark z-[70] flex flex-col p-4 items-center gap-12 text-white font-dm-sans text-lg font-medium"
           >
             <div className="w-full flex items-center justify-between top-6">
-              <Image
-                src={`/logo.png`}
-                width={107}
-                height={68}
-                alt="core innovate logo"
-              />
+              <Link onClick={() => setIsOpen(false)} href={`/`}>
+                <Image
+                  src={`/logo.png`}
+                  width={107}
+                  height={68}
+                  alt="core innovate logo"
+                />
+              </Link>
 
               <Hamburger
                 toggled={isOpen}
