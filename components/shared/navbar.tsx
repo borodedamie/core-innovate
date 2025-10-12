@@ -83,7 +83,7 @@ const NavBar = () => {
             <Link
               key={service}
               className={cn(
-                "text-xs font-dm-sans hover:text-white hover:underline font-medium text-white/70",
+                "text-sm font-dm-sans hover:text-white hover:underline font-medium text-white/70",
                 {
                   "text-[#101928]/70 hover:text-[#101928]":
                     location === "/contact-us",
