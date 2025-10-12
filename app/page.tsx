@@ -45,12 +45,14 @@ export default function Home() {
                 Contact Us
               </Button>
             </Link>
+            <Link href={`/contact-us`}>
             <Button className="w-fit" size="lg" variant="white">
               Book a free consultation
               <span className="size-8 bg-primary flex items-center justify-center rounded-[72.73px]">
                 <MoveUpRight className="size-4 text-white" />
               </span>
             </Button>
+            </Link>
           </div>
 
           <div className="flex items-center gap-3">
