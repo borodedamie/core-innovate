@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "../shared/button";
 import { MoveUpRight } from "lucide-react";
+import Link from "next/link";
 
 const BookAssessment = () => {
   return (
@@ -15,12 +16,14 @@ const BookAssessment = () => {
           Take the next step towards secure, productive, and cost-effective
           solutions that will help your business thrive.
         </p>
+        <Link href={`/contact-us`}>
         <Button size="lg" variant="white">
           Book Assessment
           <span className="size-8 bg-primary flex items-center justify-center rounded-full">
             <MoveUpRight className="size-4 text-white" />
           </span>
         </Button>
+        </Link>
       </div>
     </div>
   );
