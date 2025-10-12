@@ -107,41 +107,55 @@ export const contacts = [
 export const blogs = [
   {
     id: 1,
-    title: "The Importance of Cybersecurity in Business",
-    content:
-      "Cybersecurity is crucial for businesses of all sizes. Learn how to protect your data, network, and systems from cyber threats.",
+    title: "Optimizing Cloud Infrastructure with Managed IT Services",
+    content: "Discover how professional cloud management services can streamline your business operations, reduce costs, and enhance scalability while maintaining robust security protocols.",
     image: "/article-image.jpg",
-    tags: ["Managed IT", "Business"],
-    date: "August 25, 2025",
+    tags: ["Cloud Management", "Managed IT"],
+    date: "September 12, 2024",
   },
 
   {
     id: 2,
-    title: "How to Protect Your Business from Cyber Attacks",
-    content:
-      "Cyber attacks can happen at any time, and you need to be prepared. Learn how to protect your business from cyber attacks.",
+    title: "Proactive Threat Detection in Managed Security Solutions",
+    content: "Learn about advanced security frameworks that provide 24/7 monitoring, threat intelligence, and rapid incident response to protect your digital assets from evolving cyber threats.",
     image: "/article-image.jpg",
-    tags: ["Managed IT", "Business"],
-    date: "August 25, 2025",
+    tags: ["Managed Security", "Project Risk"],
+    date: "October 5, 2024",
   },
 
   {
     id: 3,
-    title: "The Importance of Cybersecurity in Business",
-    content:
-      "Cybersecurity is crucial for businesses of all sizes. Learn how to protect your data, network, and systems from cyber threats.",
+    title: "Agile Project Management in Software Development",
+    content: "Explore how agile methodologies combined with expert project management can accelerate software delivery, improve team collaboration, and ensure project success.",
     image: "/article-image.jpg",
-    tags: ["Managed IT", "Business"],
-    date: "August 25, 2025",
+    tags: ["Project Management", "Software Development"],
+    date: "November 18, 2024",
   },
 
   {
     id: 4,
-    title: "The Importance of Cybersecurity in Business",
-    content:
-      "Cybersecurity is crucial for businesses of all sizes. Learn how to protect your data, network, and systems from cyber threats.",
+    title: "Mitigating Project Risks in IT Implementations",
+    content: "Understand key risk assessment strategies and contingency planning approaches that help minimize disruptions during critical IT project deployments and system migrations.",
     image: "/article-image.jpg",
-    tags: ["Managed IT", "Business"],
-    date: "August 25, 2025",
+    tags: ["Project Risk", "Managed IT"],
+    date: "December 3, 2024",
   },
+
+  {
+    id: 5,
+    title: "Custom Software Solutions for Business Transformation",
+    content: "How tailored software development services can address unique business challenges, improve operational efficiency, and drive digital innovation across your organization.",
+    image: "/article-image.jpg",
+    tags: ["Software Development", "Business"],
+    date: "January 15, 2025",
+  },
+
+  {
+    id: 6,
+    title: "Hybrid Cloud Strategies with Professional Management",
+    content: "Balancing public and private cloud environments with expert management to achieve optimal performance, compliance, and cost-efficiency for your business needs.",
+    image: "/article-image.jpg",
+    tags: ["Cloud Management", "Project Management"],
+    date: "February 22, 2025",
+  }
 ];
