@@ -36,8 +36,6 @@ const ReviewComponent: React.FC<Testimonial> = ({
             />
           ))}
         </div>
-
-        <p className="font-light text-xs text-black">2 days ago</p>
       </div>
 
       <div className="flex-1 overflow-y-auto mb-6">
