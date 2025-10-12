@@ -86,13 +86,13 @@ export const contacts = [
   {
     title: "Call Now",
     description: "Call us on weekdays from 9 AM to 5 PM.",
-    contact: "+1452222192",
+    contact: "01452 222192",
     icon: "/call.svg",
   },
   {
     title: "Email Address",
-    description: "Contact us by email ,we will respond.",
-    contact: "example@email.com",
+    description: "Contact us by email, we will respond.",
+    contact: "hello@coreinnovate.co.uk",
     icon: "/mail.svg",
   },
   {
