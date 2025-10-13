@@ -69,7 +69,6 @@ const Footer = () => {
                 <p className="hover:underline">Blog / Insights / Guides</p>
               </Link>
               <p className="hover:underline">Case Studies</p>
-              <p className="hover:underline">FAQ</p>
               <p className="hover:underline">Certifications & Partnerships</p>
             </div>
           </div>

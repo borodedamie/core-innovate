@@ -8,6 +8,7 @@ import WhatSetsUsApart from "@/components/modules/what-sets-us-apart";
 import { Button } from "@/components/shared/button";
 import { MoveUpRight } from "lucide-react";
 import Image from "next/image";
+import RemoteAvatar from "@/components/shared/remote-avatar";
 import Link from "next/link";
 
 export default function Home() {
@@ -57,26 +58,23 @@ export default function Home() {
 
           <div className="flex items-center gap-3">
             <div className="flex -space-x-2">
-              <Image
+              <RemoteAvatar
                 className="inline-block h-6 w-6 rounded-full ring-2 ring-white"
-                src="https://i.pravatar.cc/100?img=1"
-                alt=""
-                width={24}
-                height={24}
+                primarySrc="https://i.pravatar.cc/100?img=1"
+                fallbackSrc="https://api.dicebear.com/9.x/initials/png?seed=AA&scale=80&radius=50&size=100"
+                size={24}
               />
-              <Image
+              <RemoteAvatar
                 className="inline-block h-6 w-6 rounded-full ring-2 ring-white"
-                src="https://i.pravatar.cc/100?img=2"
-                alt=""
-                width={24}
-                height={24}
+                primarySrc="https://i.pravatar.cc/100?img=2"
+                fallbackSrc="https://api.dicebear.com/9.x/initials/png?seed=BB&scale=80&radius=50&size=100"
+                size={24}
               />
-              <Image
+              <RemoteAvatar
                 className="inline-block h-6 w-6 rounded-full ring-2 ring-white"
-                src="https://i.pravatar.cc/100?img=3"
-                alt=""
-                width={24}
-                height={24}
+                primarySrc="https://i.pravatar.cc/100?img=3"
+                fallbackSrc="https://api.dicebear.com/9.x/initials/png?seed=CC&scale=80&radius=50&size=100"
+                size={24}
               />
             </div>
 

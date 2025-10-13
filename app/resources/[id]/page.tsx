@@ -1,4 +1,4 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+// import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import {
   Breadcrumb,
@@ -62,7 +62,7 @@ const page = () => {
             ))}
           </div>
 
-          <div className="flex items-center gap-4">
+          {/* <div className="flex items-center gap-4">
             <Avatar>
               <AvatarImage
                 src="https://github.com/maxleiter.png"
@@ -72,7 +72,7 @@ const page = () => {
             </Avatar>
 
             <p className="text-base font-medium text-secondary">Bose Arowolo</p>
-          </div>
+          </div> */}
         </div>
       </div>
 

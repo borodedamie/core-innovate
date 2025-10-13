@@ -1,4 +1,4 @@
-import { individualProgrammes } from "@/lib/data";
+import { individualProgrammes, organizationProgrammes } from "@/lib/data";
 import { CircleCheck } from "lucide-react";
 
 import React from "react";
@@ -61,7 +61,7 @@ const TrainingPath = () => {
           </div>
 
           <div className="flex flex-col gap-y-6">
-            {individualProgrammes.map((programme, index) => (
+            {organizationProgrammes.map((programme, index) => (
               <div className="flex gap-2" key={index}>
                 <CircleCheck className="size-5 text-white fill-primary" />
                 <div className="space-y-2">
@@ -86,4 +86,3 @@ const TrainingPath = () => {
 };
 
 export default TrainingPath;
-

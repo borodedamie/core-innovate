@@ -65,7 +65,7 @@ export const individualProgrammes = [
     ],
   },
   {
-    title: "Cybersecurity Foundations",
+    title: "Cloud Essentials",
     topics: [
       "Understanding Microsoft Azure and AWS",
       "Cloud concepts, architecture, and security fundamentals",
@@ -78,6 +78,41 @@ export const individualProgrammes = [
       "Incident detection and response",
       "Ethical hacking and penetration testing basics",
       "Security operations and compliance frameworks",
+    ],
+  },
+];
+
+export const organizationProgrammes = [
+  {
+    title: "Cybersecurity Awareness",
+    topics: [
+      "Phishing simulations and social engineering training",
+      "Best practices for password management and secure communication",
+      "Safe remote working practices",
+    ],
+  },
+  {
+    title: "Advanced IT and Security Training",
+    topics: [
+      "Incident detection and response for IT teams",
+      "SOC tools, threat intelligence, and vulnerability management",
+      "Cloud security for Microsoft Azure and AWS environments",
+    ],
+  },
+  {
+    title: "Regulatory & Compliance Training",
+    topics: [
+      "GDPR, PCI DSS, and ISO 27001 awareness",
+      "Role-based compliance workshops",
+      "Audit preparation and documentation practices",
+    ],
+  },
+  {
+    title: "Custom Corporate Programs",
+    topics: [
+      "Tailored workshops for specific teams",
+      "Executive training for board-level cyber awareness",
+      "Ongoing refresher courses and quarterly updates",
     ],
   },
 ];
