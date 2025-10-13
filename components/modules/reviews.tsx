@@ -2,10 +2,8 @@
 
 import React from "react";
 import SectionBadge from "../shared/section-badge";
-import ReviewComponent from "../ui/review";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import ReviewComponent from "../ui/review";
 
 const Reviews = () => {
   return (
@@ -22,31 +20,11 @@ const Reviews = () => {
       </div>
 
       <div className="pt-6">
-        <Swiper
-          modules={[Pagination]}
-          slidesPerView={1}
-          spaceBetween={24}
-          className="pb-10"
-          autoHeight={false}
-          pagination={{
-            clickable: true,
-            el: ".custom-pagination",
-          }}
-        >
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mx-auto max-w-screen-lg">
           {testimonials.map((testimonial) => (
-            <SwiperSlide
-              key={testimonial.id}
-              style={{
-                height: "-webkit-fill-available",
-              }}
-              className="!w-[360px] items-stretch flex"
-            >
-              <ReviewComponent {...testimonial} />
-            </SwiperSlide>
+            <ReviewComponent key={testimonial.id} {...testimonial} />
           ))}
-        </Swiper>
-
-        <div className="custom-pagination flex justify-center mt-4"></div>
+        </div>
       </div>
     </div>
   );
