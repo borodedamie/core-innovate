@@ -1,3 +1,19 @@
+export type BlogSection = {
+  heading: string;
+  paragraphs: string[];
+};
+
+export type Blog = {
+  id: number;
+  title: string;
+  content: string;
+  image: string;
+  heroImage?: string;
+  tags: string[];
+  date: string;
+  sections: BlogSection[];
+};
+
 export const accordionData = [
   {
     question: "What services does CoreInnovate IT provide?",
@@ -139,58 +155,114 @@ export const contacts = [
   },
 ];
 
-export const blogs = [
+export const blogs: Blog[] = [
   {
     id: 1,
     title: "Optimizing Cloud Infrastructure with Managed IT Services",
-    content: "Discover how professional cloud management services can streamline your business operations, reduce costs, and enhance scalability while maintaining robust security protocols.",
+    content:
+      "Discover how professional cloud management services can streamline your business operations, reduce costs, and enhance scalability while maintaining robust security protocols.",
     image: "/article-image.jpg",
     tags: ["Cloud Management", "Managed IT"],
     date: "September 12, 2024",
+    heroImage: "/popular.jpg",
+    sections: [
+      {
+        heading: "Frequent Downtime and Slow Systems",
+        paragraphs: [
+          "If your cloud workloads are sluggish or downtime is common, it's a sign to revisit architecture and monitoring.",
+          "Managed IT providers implement observability and autoscaling to maintain uptime and performance.",
+        ],
+      },
+      {
+        heading: "Rising IT Costs Without Predictable Value",
+        paragraphs: [
+          "Right-size compute and storage, apply lifecycle policies, and leverage cost reports to control spend.",
+        ],
+      },
+      {
+        heading: "Security Risks Keep You Awake at Night",
+        paragraphs: [
+          "Defense-in-depth, compliant baselines, and continuous posture management are essential in cloud.",
+        ],
+      },
+    ],
   },
-
   {
     id: 2,
     title: "Proactive Threat Detection in Managed Security Solutions",
-    content: "Learn about advanced security frameworks that provide 24/7 monitoring, threat intelligence, and rapid incident response to protect your digital assets from evolving cyber threats.",
+    content:
+      "Learn about advanced security frameworks that provide 24/7 monitoring, threat intelligence, and rapid incident response to protect your digital assets from evolving cyber threats.",
     image: "/article-image.jpg",
     tags: ["Managed Security", "Project Risk"],
     date: "October 5, 2024",
+    heroImage: "/soc.jpg",
+    sections: [
+      {
+        heading: "Frequent Downtime and Slow Systems",
+        paragraphs: [
+          "Threats and noisy alerts can slow teams down. A tuned SIEM and SOC workflows restore efficiency.",
+        ],
+      },
+      {
+        heading: "Security Risks Keep You Awake at Night",
+        paragraphs: [
+          "Managed detection and response reduces mean time to detect and respond with 24/7 coverage.",
+        ],
+      },
+      {
+        heading: "You’re Focused on IT, Not Your Business",
+        paragraphs: [
+          "Outsourcing operations frees your team to focus on value-add initiatives.",
+        ],
+      },
+    ],
   },
-
   {
     id: 3,
     title: "Agile Project Management in Software Development",
-    content: "Explore how agile methodologies combined with expert project management can accelerate software delivery, improve team collaboration, and ensure project success.",
+    content:
+      "Explore how agile methodologies combined with expert project management can accelerate software delivery, improve team collaboration, and ensure project success.",
     image: "/article-image.jpg",
     tags: ["Project Management", "Software Development"],
     date: "November 18, 2024",
+    heroImage: "/project-management.jpg",
+    sections: [
+      {
+        heading: "Lack of In-House Expertise",
+        paragraphs: [
+          "Coaching, playbooks, and tooling help teams adopt agile effectively without heavy ceremony.",
+        ],
+      },
+      {
+        heading: "The Bottom Line",
+        paragraphs: [
+          "Agile is a means to deliver value sooner with quality and feedback loops.",
+        ],
+      },
+    ],
   },
-
   {
     id: 4,
     title: "Mitigating Project Risks in IT Implementations",
-    content: "Understand key risk assessment strategies and contingency planning approaches that help minimize disruptions during critical IT project deployments and system migrations.",
+    content:
+      "Understand key risk assessment strategies and contingency planning approaches that help minimize disruptions during critical IT project deployments and system migrations.",
     image: "/article-image.jpg",
     tags: ["Project Risk", "Managed IT"],
     date: "December 3, 2024",
+    heroImage: "/project-risk.jpg",
+    sections: [
+      {
+        heading: "Security Risks Keep You Awake at Night",
+        paragraphs: [
+          "Risk registers, owners, and mitigations keep complex implementations on track.",
+        ],
+      },
+      {
+        heading: "You’re Focused on IT, Not Your Business",
+        paragraphs: [
+          "Good governance ensures delivery aligns with business goals and timelines.",
+        ],
+      },
+    ],
   },
-
-  {
-    id: 5,
-    title: "Custom Software Solutions for Business Transformation",
-    content: "How tailored software development services can address unique business challenges, improve operational efficiency, and drive digital innovation across your organization.",
-    image: "/article-image.jpg",
-    tags: ["Software Development", "Business"],
-    date: "January 15, 2025",
-  },
-
-  {
-    id: 6,
-    title: "Hybrid Cloud Strategies with Professional Management",
-    content: "Balancing public and private cloud environments with expert management to achieve optimal performance, compliance, and cost-efficiency for your business needs.",
-    image: "/article-image.jpg",
-    tags: ["Cloud Management", "Project Management"],
-    date: "February 22, 2025",
-  }
 ];

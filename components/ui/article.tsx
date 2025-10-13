@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 
 interface ArticleProps {
+  id: number;
   image?: string;
   title: string;
   content: string;
@@ -13,6 +14,7 @@ interface ArticleProps {
 }
 
 const Article: React.FC<ArticleProps> = ({
+  id,
   image,
   title,
   content,
@@ -20,7 +22,7 @@ const Article: React.FC<ArticleProps> = ({
   tags,
 }) => {
   return (
-    <Link href={`/resources/765yjhgjh`}>
+  <Link href={`/resources/${id}`}>
       <div className="flex flex-col gap-y-6">
         {image ? (
           <div className="relative h-[271px] overflow-hidden rounded-lg">

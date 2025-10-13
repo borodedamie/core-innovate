@@ -14,7 +14,7 @@ const RecentArticles = () => {
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {blogs.map((blog) => (
-          <Article key={blog.id} {...blog} />
+          <Article key={blog.id} id={blog.id} image={blog.image} title={blog.title} content={blog.content} date={blog.date} tags={blog.tags} />
         ))}
       </div>
     </div>

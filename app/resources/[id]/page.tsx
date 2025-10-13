@@ -8,14 +8,38 @@ import {
   BreadcrumbList,
 } from "@/components/ui/breadcrumb";
 import { cn } from "@/lib/utils";
+import { blogs } from "@/lib/data";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 
-const page = () => {
+type PageProps = { params: Promise<{ id: string }> };
+
+export function generateStaticParams() {
+  return blogs.map((b) => ({ id: String(b.id) }));
+}
+
+export async function generateMetadata({ params }: PageProps) {
+  const { id } = await params;
+  const blog = blogs.find((b) => String(b.id) === id);
+  if (!blog) return {};
+  return {
+    title: `${blog.title} | CoreInnovate` ,
+    description: blog.content,
+  };
+}
+
+const page = async ({ params }: PageProps) => {
+  const { id } = await params;
+  const blog = blogs.find((b) => String(b.id) === id);
+  if (!blog) return notFound();
+
+  const { title, content, heroImage, tags, sections, date } = blog;
+
   return (
     <div className="pt-64 px-4 sm:px-8 lg:px-12 space-y-16">
       <div className="grid lg:grid-cols-2 justify-between items-center gap-6">
         <div className="relative w-full h-[476px] lg:h-full rounded-lg overflow-hidden">
-          <Image src={`/popular.jpg`} fill className="object-cover" alt="hand holding cloud system" />
+          <Image src={heroImage ?? "/popular.jpg"} fill className="object-cover" alt={title} />
         </div>
 
         <div className="grid gap-y-4">
@@ -27,24 +51,22 @@ const page = () => {
               <BreadcrumbSeparator>/</BreadcrumbSeparator>
               <BreadcrumbItem>
                 <BreadcrumbLink className="text-primary truncate">
-                  {" "}
-                  5 Signs Your Business Needs Managed IT Services
+                  {title}
                 </BreadcrumbLink>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
 
           <h3 className="font-semibold font-dm-sans text-4xl sm:text-5xl text-black">
-            5 Signs Your Business Needs Managed IT Services
+            {title}
           </h3>
 
           <p className="text-base line-clamp-4 text-secondary">
-            Struggling with downtime, rising IT costs, or slow support? Here’s
-            how to know when it’s time for managed IT.
+            {content}
           </p>
 
           <div className="flex items-center gap-2 flex-wrap">
-            {["Security", "Cloud", "IT", "Business"].map((tag, index) => (
+            {tags.map((tag, index) => (
               <Badge
                 key={index}
                 className={cn(
@@ -79,18 +101,9 @@ const page = () => {
       <div className="flex flex-col gap-12 lg:flex-row">
         <div className="rounded-2xl h-fit text-base text-[#1B1B1F] w-full p-4 sm:max-w-[328px] border border-[#D0D5DD] space-y-3">
           <p className="text-lg font-semibold">In this article</p>
-
-          <p>Frequent Downtime and Slow Systems</p>
-
-          <p>Rising IT Costs Without Predictable Value</p>
-
-          <p>Security Risks Keep You Awake at Night</p>
-
-          <p>Security Risks Keep You Awake at Night</p>
-
-          <p>Lack of In-House Expertise</p>
-
-          <p>You’re Focused on IT, Not Your Business</p>
+          {sections.map((s) => (
+            <p key={s.heading}>{s.heading}</p>
+          ))}
         </div>
 
         <div className="text-base flex flex-col gap-y-6 text-secondary">
@@ -98,101 +111,27 @@ const page = () => {
             Technology is the backbone of every modern business. From email and
             collaboration tools to cloud storage and cybersecurity, your IT
             systems keep daily operations running. But as businesses grow, so do
-            the demands on IT and many organisations struggle to keep up. That’s
-            where Managed IT Services come in.
+            the demands on IT. That’s where our expertise comes in.
           </p>
 
           <p>
-            Here are five clear signs it’s time to consider outsourcing your IT
-            to a trusted partner like CoreInnovate:
+            Here are the key topics we cover in this article:
           </p>
 
-          <span className="space-y-2">
-            <p className="text-lg font-semibold text-secondary">
-              1. Frequent Downtime and Slow Systems
-            </p>
+          {sections.map((s, idx) => (
+            <span className="space-y-2" key={s.heading}>
+              <p className="text-lg font-semibold text-secondary">
+                {idx + 1}. {s.heading}
+              </p>
 
-            <p>
-              If your systems are often crashing, running slowly, or taking too
-              long to recover from issues, it’s a red flag. Downtime doesn’t
-              just frustrate employees it costs money and damages productivity.
-              Managed IT providers offer 24/7 monitoring and proactive
-              maintenance to stop problems before they impact your business.
-            </p>
-          </span>
-
-          <span className="space-y-2">
-            <p className="text-lg font-semibold text-secondary">
-              2. Rising IT Costs Without Predictable Value
-            </p>
-
-            <p>
-              If your systems are often crashing, running slowly, or taking too
-              long to recover from issues, it’s a red flag. Downtime doesn’t
-              just frustrate employees it costs money and damages productivity.
-              Managed IT providers offer 24/7 monitoring and proactive
-              maintenance to stop problems before they impact your business.
-            </p>
-          </span>
-
-          <span className="space-y-2">
-            <p className="text-lg font-semibold text-secondary">
-              3. Security Risks Keep You Awake at Night
-            </p>
-
-            <p>
-              Cybersecurity threats are increasing daily. If you’re worried
-              about ransomware, phishing, or data breaches or if your current
-              protection feels inadequate it’s time to bring in experts. With
-              enterprise-grade security and SOC-as-a-Service, Managed IT ensures
-              your business is protected around the clock.
-            </p>
-          </span>
-
-          <span className="space-y-2">
-            <p className="text-lg font-semibold text-secondary">
-              4. Lack of In-House Expertise
-            </p>
-
-            <p>
-              Small and mid-sized businesses often can’t afford a full IT
-              department. Even if you have one IT staff member, they may
-              struggle to cover everything from networks to cloud to compliance.
-              Managed IT gives you access to a team of specialists with a wide
-              range of skills without the cost of hiring them all in-house.
-            </p>
-          </span>
-
-          <span className="space-y-2">
-            <p className="text-lg font-semibold text-secondary">
-              5. You’re Focused on IT, Not Your Business
-            </p>
-
-            <p>
-              When technology issues eat up your time, it distracts from what
-              matters: running and growing your business. Managed IT takes the
-              burden off your shoulders so you can focus on customers,
-              innovation, and strategy while knowing your IT is in safe hands.
-            </p>
-          </span>
-
-          <span className="space-y-2">
-            <p className="text-lg font-semibold text-secondary">
-              The Bottom Line
-            </p>
-
-            <p>
-              If you recognise any of these signs in your business, it’s time to
-              explore Managed IT Services. With CoreInnovate, you gain proactive
-              support, expert monitoring, and strategic guidance — ensuring your
-              systems are secure, efficient, and reliable.
-            </p>
-          </span>
+              {s.paragraphs.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </span>
+          ))}
 
           <p>
-            Ready to simplify your IT? Contact{" "}
-            <span className="text-primary">CoreInnovate</span> today to learn
-            how our Managed IT Services can transform your business.
+            Ready to learn more? Contact <span className="text-primary">CoreInnovate</span> to discover how we can help your business.
           </p>
         </div>
       </div>

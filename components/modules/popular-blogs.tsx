@@ -22,9 +22,10 @@ const PopularBlogs = () => {
         <div className="grid gap-y-6">
           {blogs.slice(0, 2).map((blog) => (
             <Article
+              key={blog.id}
+              id={blog.id}
               title={blog.title}
               tags={blog.tags}
-              key={blog.id}
               content={blog.content}
               date={blog.date}
             />
