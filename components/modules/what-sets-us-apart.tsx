@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "../shared/button";
 import { MoveRight } from "lucide-react";
+import Link from "next/link";
 
 const WhatSetsUsApart = () => {
   return (
@@ -40,10 +41,15 @@ const WhatSetsUsApart = () => {
           </p>
         </div>
 
-        <Button variant="white" className="text-primary flex items-center gap-2">
-          Learn More
-          <MoveRight />
-        </Button>
+        <Link href="/services">
+          <Button
+            variant="white"
+            className="text-primary flex items-center gap-2"
+          >
+            Learn More
+            <MoveRight />
+          </Button>
+        </Link>
       </div>
     </div>
   );

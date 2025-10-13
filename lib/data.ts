@@ -192,7 +192,7 @@ export const blogs: Blog[] = [
     title: "Proactive Threat Detection in Managed Security Solutions",
     content:
       "Learn about advanced security frameworks that provide 24/7 monitoring, threat intelligence, and rapid incident response to protect your digital assets from evolving cyber threats.",
-    image: "/article-image.jpg",
+    image: "/blog-two.png",
     tags: ["Managed Security", "Project Risk"],
     date: "October 5, 2024",
     heroImage: "/soc.jpg",
@@ -222,7 +222,7 @@ export const blogs: Blog[] = [
     title: "Agile Project Management in Software Development",
     content:
       "Explore how agile methodologies combined with expert project management can accelerate software delivery, improve team collaboration, and ensure project success.",
-    image: "/article-image.jpg",
+    image: "/blog-three.png",
     tags: ["Project Management", "Software Development"],
     date: "November 18, 2024",
     heroImage: "/project-management.jpg",
@@ -246,7 +246,7 @@ export const blogs: Blog[] = [
     title: "Mitigating Project Risks in IT Implementations",
     content:
       "Understand key risk assessment strategies and contingency planning approaches that help minimize disruptions during critical IT project deployments and system migrations.",
-    image: "/article-image.jpg",
+    image: "/blog-four.png",
     tags: ["Project Risk", "Managed IT"],
     date: "December 3, 2024",
     heroImage: "/project-risk.jpg",

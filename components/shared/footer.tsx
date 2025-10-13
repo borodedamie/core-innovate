@@ -79,8 +79,8 @@ const Footer = () => {
         <div className="flex flex-wrap text-sm font-medium text-[#667185] items-center gap-8">
           <p className="hover:underline">Terms of Service</p>
           <p className="hover:underline">Privacy Policy</p>
-          <p className="hover:underline">Security</p>
-          <p className="hover:underline">Site Map</p>
+          {/* <p className="hover:underline">Security</p>
+          <p className="hover:underline">Site Map</p> */}
         </div>
 
         <p className="text-sm text-[#98A2B3]">© 2025. All rights reserved.</p>

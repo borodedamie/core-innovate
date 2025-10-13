@@ -36,7 +36,7 @@ const CloudManagementServices = () => {
         </div>
 
         <div className="relative h-[462px] sm:h-full rounded-2xl overflow-hidden">
-          <Image fill className="object-cover" alt="team" src={`/cloud.jpg`} />
+          <Image fill className="object-cover" alt="team" src={`/new-cloud.png`} />
         </div>
       </div>
     </div>

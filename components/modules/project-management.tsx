@@ -19,7 +19,7 @@ const ProjectManagement = () => {
 
       <div className="grid lg:grid-cols-2 gap-16">
         <div className="relative h-[462px] rounded-2xl overflow-hidden">
-          <Image fill className="object-cover" alt="project-management" src={`/project-management.jpg`} />
+          <Image fill className="object-cover" alt="project-management" src={`/new-project.png`} />
         </div>
 
         <div className="space-y-6">

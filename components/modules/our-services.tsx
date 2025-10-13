@@ -3,6 +3,7 @@ import SectionBadge from "../shared/section-badge";
 import ServiceCard from "../ui/service-card";
 import { Button } from "../shared/button";
 import { MoveRight } from "lucide-react";
+import Link from "next/link";
 
 function OurServices() {
   return (
@@ -35,10 +36,12 @@ function OurServices() {
               detail?
             </p>
 
-            <Button variant="white" className="text-primary">
-              Learn More
-              <MoveRight />
-            </Button>
+            <Link href="/services">
+              <Button variant="white" className="text-primary">
+                Learn More
+                <MoveRight />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

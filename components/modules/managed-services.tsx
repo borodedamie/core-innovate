@@ -22,7 +22,7 @@ const ManagedServices = () => {
             fill
             className="object-cover"
             alt="team"
-            src={`/team.jpg`}
+            src={`/new-team.png`}
           />
         </div>
 
