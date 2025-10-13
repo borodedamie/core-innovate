@@ -11,7 +11,7 @@ const ManagedSecurity = () => {
           Managed Security (SOC AS-A-SERVICE)
         </h3>
         <p className=" max-w-[464px] mx-auto text-base font-medium">
-          Our SOC-as-a-Service delivers 4/7 monitoring and response, delivering
+          Our SOC-as-a-Service delivers 24/7 monitoring and response, delivering
           enterprise security at affordable cost.
         </p>
       </div>
