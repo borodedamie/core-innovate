@@ -20,7 +20,7 @@ const page = () => {
         </div>
       </div>
 
-      <div className="relative h-[455px] -mt-16 bg-center">
+      <div className="relative h-[455px] rounded-t-2xl overflow-hidden -mt-24 bg-center">
         <Image
           className="object-cover"
           alt="about us"

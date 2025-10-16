@@ -21,8 +21,8 @@ const OurValues = () => {
         </div>
       </div>
 
-      <div className="relative w-full bg-center overflow-hidden rounded-2xl">
-        <Image src="/founder.jpg" width={443} height={500} className="h-auto w-full" alt="values"/>
+      <div className="relative w-full h-[488px] bg-center overflow-hidden rounded-2xl">
+        <Image src="/founder.jpg" fill className="object-cover" alt="Micheal Folorunsho"/>
       </div>
     </div>
   );

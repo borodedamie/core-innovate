@@ -32,7 +32,7 @@ const Article: React.FC<ArticleProps> = ({
 
         <div className="flex flex-col gap-y-4">
           <p className="font-medium text-sm text-secondary">{date}</p>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center flex-wrap gap-2">
             {tags?.map((tag, index) => (
               <Badge
                 key={tag}
