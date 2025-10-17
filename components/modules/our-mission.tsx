@@ -3,7 +3,7 @@ import SectionBadge from "../shared/section-badge";
 
 const OurMission = () => {
   return (
-    <div className="px-4 sm:px-8 space-y-6 lg:px-12">
+    <div className="px-4 sm:px-8 space-y-6 max-w-7xl mx-auto lg:px-12">
       <SectionBadge title="Our MISSion" />
 
       <div className="grid lg:grid-cols-2 gap-12">

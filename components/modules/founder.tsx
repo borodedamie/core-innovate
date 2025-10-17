@@ -4,11 +4,11 @@ import Image from "next/image";
 
 const Founder = () => {
   return (
-    <div className="px-4 space-y-6 sm:px-8 lg:px-12">
+    <div className="px-4 space-y-6 sm:px-8 max-w-7xl mx-auto lg:px-12">
       <SectionBadge title="Founder & Information Security Leader" />
 
-      <div className="grid lg:grid-cols-2 justify-center items-center gap-12">
-        <div className="space-y-6">
+      <div className="grid lg:grid-cols-3 justify-center items-center gap-12">
+        <div className="space-y-6 lg:col-span-2">
           <h3 className="title">About Mike Folley</h3>
 
           <div className="text-base text-secondary font-medium space-y-6">
@@ -48,13 +48,12 @@ const Founder = () => {
           </div>
         </div>
 
-        <div className="w-full overflow-hidden rounded-2xl">
+        <div className="relative w-[356px] bg-center bg-cover aspect-square h-[488px] overflow-hidden rounded-2xl">
           <Image
-            src="/founder.jpg"
+            src="/mike.jpg"
             alt="mike folorunsho"
-            width={443}
-            height={559}
-            className="w-full h-auto lg:h-[780px] rounded-2xl object-cover"
+            fill
+            className="object-fill"
           />
         </div>
       </div>
