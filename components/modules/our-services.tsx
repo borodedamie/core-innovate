@@ -7,7 +7,7 @@ import Link from "next/link";
 
 function OurServices() {
   return (
-    <div className="px-4 mx-auto max-w-7xl sm:px-8 flex flex-col gap-y-6 lg:px-12">
+    <div className="px-4 mx-auto max-w-7xl flex flex-col gap-y-6">
       <SectionBadge title="Our Services" />
 
       <div>

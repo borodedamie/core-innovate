@@ -15,10 +15,11 @@ export default function Home() {
   return (
     <div className="space-y-16">
       <div
-        className="h-[780px] hero bg-no-repeat flex px-4 sm:px-8 lg:px-12 items-center bg-cover bg-center
+        className="h-[780px] hero bg-no-repeat flex px-4 items-center bg-cover bg-center
         bg-[linear-gradient(104.5deg,#16365F_44.07%,rgba(25,80,130,0.841779)_57.49%,rgba(35,157,234,0.22)_73.41%,#239DEA_94.11%),url('/home.jpg')]"
       >
-        <div className="flex flex-col gap-y-6">
+       <div className="max-w-7xl mx-auto w-full">
+       <div className="flex flex-col gap-y-6">
           <span className="flex items-center gap-2 py-2.5 px-4 rounded-3xl bg-[#193D6B] text-white w-fit">
             <Image
               src={`/sparkle.svg`}
@@ -83,6 +84,7 @@ export default function Home() {
             </p>
           </div>
         </div>
+       </div>
       </div>
 
       <OurServices />

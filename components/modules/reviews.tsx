@@ -7,23 +7,25 @@ import ReviewComponent from "../ui/review";
 
 const Reviews = () => {
   return (
-    <div className="px-4 sm:px-8 lg:px-12 bg-[#F5F5F5] space-y-6 py-16">
-      <SectionBadge title="reviews" />
+    <div className="px-4 bg-[#F5F5F5] space-y-6 py-16">
+      <div className="space-y-6 max-w-7xl mx-auto">
+        <SectionBadge title="reviews" />
 
-      <div>
-        <h3 className="text-secondary font-dm-sans font-semibold text-[28px]">
-          What our clients say about us
-        </h3>
-        <p className="text-base text-tertiary font-medium">
-          We do our best to provide the best experience ever
-        </p>
-      </div>
+        <div>
+          <h3 className="text-secondary font-dm-sans font-semibold text-[28px]">
+            What our clients say about us
+          </h3>
+          <p className="text-base text-tertiary font-medium">
+            We do our best to provide the best experience ever
+          </p>
+        </div>
 
-      <div className="pt-6">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mx-auto max-w-screen-lg">
-          {testimonials.map((testimonial) => (
-            <ReviewComponent key={testimonial.id} {...testimonial} />
-          ))}
+        <div className="pt-6">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {testimonials.map((testimonial) => (
+              <ReviewComponent key={testimonial.id} {...testimonial} />
+            ))}
+          </div>
         </div>
       </div>
     </div>

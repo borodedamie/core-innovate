@@ -30,71 +30,75 @@ const NavBar = () => {
       <div className="fixed w-full z-50">
         <nav
           className={cn(
-            "flex items-center bg-dark py-4 sm:pt-6 sm:pb-4 px-4 sm:px-8 lg:px-12 justify-between z-50",
+            "bg-dark py-4 sm:pt-6 sm:pb-4 px-4 z-50"
             // { "bg-white shadow-2xs": location === "/contact-us" }
           )}
         >
-          <Link href={`/`}>
-            <Image
-              src={`/logo.png`}
-              width={107}
-              height={68}
-              alt="core innovate logo"
-            />
-          </Link>
+          <div className="max-w-7xl flex flex-col gap-4 mx-auto">
+            <div className="flex items-center justify-between">
+              <Link href={`/`}>
+                <Image
+                  src={`/logo.png`}
+                  width={107}
+                  height={68}
+                  alt="core innovate logo"
+                />
+              </Link>
 
-          <div
-            className={cn(
-              "hidden lg:flex items-center text-base text-white font-dm-sans font-medium gap-8",
-              // { "text-[#101928]": location === "/contact-us" }
-            )}
-          >
-            {/* <Link className={linkClasses("/services")} href={"/services"}>
+              <div
+                className={cn(
+                  "hidden lg:flex items-center text-base text-white font-dm-sans font-medium gap-8"
+                  // { "text-[#101928]": location === "/contact-us" }
+                )}
+              >
+                {/* <Link className={linkClasses("/services")} href={"/services"}>
               Services
             </Link> */}
-            <Link className={linkClasses("/resources")} href={"/resources"}>
-              Resources
-            </Link>
-            <Link className={linkClasses("/about-us")} href={"/about-us"}>
-              About Us
-            </Link>
+                <Link className={linkClasses("/resources")} href={"/resources"}>
+                  Resources
+                </Link>
+                <Link className={linkClasses("/about-us")} href={"/about-us"}>
+                  About Us
+                </Link>
 
-            <Link href={`/contact-us`}>
-              <Button size="lg">Contact Us</Button>
-            </Link>
-          </div>
+                <Link href={`/contact-us`}>
+                  <Button size="lg">Contact Us</Button>
+                </Link>
+              </div>
 
-          <div className="lg:hidden">
-            <Hamburger
-              toggled={isOpen}
-              toggle={setIsOpen}
-              color={location === "/contact-us" ? "#101928" : "#fff"}
-              size={24}
-            />
+              <div className="lg:hidden">
+                <Hamburger
+                  toggled={isOpen}
+                  toggle={setIsOpen}
+                  color={location === "/contact-us" ? "#101928" : "#fff"}
+                  size={24}
+                />
+              </div>
+            </div>
+            <div
+              className={cn(
+                " px-4 hidden lg:flex items-center gap-3 justify-end"
+                // { "bg-white": location === "/contact-us" }
+              )}
+            >
+              {services.map((service) => (
+                <Link
+                  key={service}
+                  className={cn(
+                    "text-md font-dm-sans hover:text-white hover:underline font-medium text-white/70"
+                    // {
+                    //   "text-[#101928]/70 hover:text-[#101928]":
+                    //     location === "/contact-us",
+                    // }
+                  )}
+                  href={`/services`}
+                >
+                  {service}
+                </Link>
+              ))}
+            </div>
           </div>
         </nav>
-        <div
-          className={cn(
-            "bg-dark pb-4 shadow-2xs px-4 sm:px-8 lg:px-12 hidden lg:flex items-center gap-3 justify-end",
-            // { "bg-white": location === "/contact-us" }
-          )}
-        >
-          {services.map((service) => (
-            <Link
-              key={service}
-              className={cn(
-                "text-md font-dm-sans hover:text-white hover:underline font-medium text-white/70",
-                // {
-                //   "text-[#101928]/70 hover:text-[#101928]":
-                //     location === "/contact-us",
-                // }
-              )}
-              href={`/services`}
-            >
-              {service}
-            </Link>
-          ))}
-        </div>
       </div>
 
       <AnimatePresence>

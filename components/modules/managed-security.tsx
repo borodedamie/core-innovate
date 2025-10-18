@@ -5,7 +5,7 @@ import { CircleCheck } from "lucide-react";
 
 const ManagedSecurity = () => {
   return (
-    <div className="px-4 sm:px-8 -mt-16 py-16 text-white bg-dark lg:px-12">
+    <div className="px-4 -mt-16 py-16 text-white bg-dark">
       <div className="space-y-12 max-w-7xl mx-auto">
       <div className="text-center">
         <h3 className=" text-[28px] font-semibold font-dm-sans">

@@ -19,6 +19,7 @@ const SendMessage = () => {
   const [loading, setLoading] = useState(false);
   const [captchaValue, setCaptchaValue] = useState<string | null>(null);
   const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const [captchaError, setCaptchaError] = useState<string>("");
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -40,9 +41,11 @@ const SendMessage = () => {
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!captchaValue) {
-      toast.error("Please verify that you are not a robot.");
+      setCaptchaError("Please verify that you are not a robot.");
       return;
     }
+
+    setCaptchaError("");
 
     try {
       setLoading(true);
@@ -89,6 +92,7 @@ const SendMessage = () => {
       toast.error("Error sending message. Please try again.");
     } finally {
       setLoading(false);
+      setCaptchaValue(null);
     }
   };
 
@@ -98,7 +102,7 @@ const SendMessage = () => {
 
   return (
     <div className="bg-[#F9FAFB]">
-      <div className="grid gap-12 lg:grid-cols-2 rounded-2xl p-6 mx-auto max-w-7xl">
+      <div className="grid gap-12 lg:grid-cols-2 rounded-2xl py-6 px-4 mx-auto max-w-7xl">
         <div className="relative h-[398px] lg:h-full w-full">
           <Image
             src={`/support.jpg`}
@@ -203,10 +207,14 @@ const SendMessage = () => {
               />
 
               <ReCAPTCHA
-                sitekey="YOUR_SITE_KEY"
+                sitekey={process.env.NEXT_PUBLIC_CAPTCHA_KEY!}
                 ref={recaptchaRef}
                 onChange={handleCaptchaChange}
               />
+
+              {captchaError && (
+                <p className="text-red-500 text-sm">{captchaError}</p>
+              )}
 
               <Button type="submit" className="w-full" disabled={loading}>
                 {loading ? "Sending..." : "Submit"}

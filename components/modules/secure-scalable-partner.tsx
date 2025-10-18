@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const SecureScalablePartner = () => {
   return (
-    <div className="px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto space-y-6">
+    <div className="px-4 max-w-7xl mx-auto space-y-6">
       <div className="grid lg:grid-cols-2 gap-12">
         <div className="space-y-6">
           <SectionBadge title="why choose us" />

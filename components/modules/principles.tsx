@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Principle = () => {
   return (
-    <div className="px-4 sm:px-8 flex flex-col max-w-7xl mx-auto items-center space-y-6 lg:px-12">
+    <div className="px-4 flex flex-col max-w-7xl mx-auto items-center space-y-6">
       <SectionBadge title="Our Core values" />
 
       <div className="text-center">

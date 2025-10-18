@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Founder = () => {
   return (
-    <div className="px-4 space-y-6 sm:px-8 max-w-7xl mx-auto lg:px-12">
+    <div className="px-4 space-y-6 max-w-7xl mx-auto">
       <SectionBadge title="Founder & Information Security Leader" />
 
       <div className="flex flex-col lg:flex-row justify-center items-center gap-12">

@@ -4,7 +4,7 @@ import SectionBadge from "../shared/section-badge";
 
 const OurValues = () => {
   return (
-    <div className="px-4 max-w-7xl mx-auto sm:px-8 grid bg-[url('/vector.png')] bg-center bg-cover bg-no-repeat lg:grid-cols-3 gap-12 lg:px-12">
+    <div className="px-4 max-w-7xl mx-auto grid bg-[url('/vector.png')] bg-center bg-cover bg-no-repeat lg:grid-cols-3 gap-12">
       <div className="bg-primary lg:col-span-2 flex items-center rounded-2xl px-5 py-10 sm:p-10">
         <div className="text-white space-y-7">
           <SectionBadge title="our core value" />
@@ -21,8 +21,7 @@ const OurValues = () => {
         </div>
       </div>
 
-<div className="h-[488px] bg-[url('/founder.jpg')] rounded-2xl bg-cover"/>
-      
+      <div className="h-[488px] bg-[url('/founder.jpg')] rounded-2xl bg-cover" />
     </div>
   );
 };

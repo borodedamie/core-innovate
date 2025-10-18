@@ -7,7 +7,7 @@ import VerticalStepList from "../shared/vertical-steplist";
 
 const SoftwareDevelopment = () => {
   return (
-    <div className="px-4 sm:px-8 bg-[#F5F5F5] relative py-16 space-y-12 lg:px-12">
+    <div className="px-4 bg-[#F5F5F5] relative py-16 space-y-12">
       <div className="absolute inset-0 bg-[url('/vector-white.png')] bg-center bg-cover bg-no-repeat" />
 
       <div className="space-y-12 max-w-7xl mx-auto">
