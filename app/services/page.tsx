@@ -10,7 +10,7 @@ import BookAssessment from "@/components/modules/book-assessment";
 
 const page = () => {
   return (
-    <div className="space-y-16 pt-36">
+    <div className="space-y-16 pt-10 sm:pt-36">
       <div className="bg-dark h-[369px] flex items-center px-4 sm:px-8 lg:px-12">
         <div className="relative text-white h-[369px] bg-[url('/services-hero.png')] bg-cover bg-center text-center w-full justify-center flex flex-col items-center gap-6">
           <p className="text-4xl max-w-[600px] font-semibold font-dm-sans">
