@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Input } from "../ui/input";
 import {
   Select,
@@ -13,9 +13,12 @@ import Image from "next/image";
 import { Textarea } from "../ui/textarea";
 import { Button } from "../shared/button";
 import { toast } from "sonner";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const SendMessage = () => {
   const [loading, setLoading] = useState(false);
+  const [captchaValue, setCaptchaValue] = useState<string | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -36,6 +39,11 @@ const SendMessage = () => {
 
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!captchaValue) {
+      toast.error("Please verify that you are not a robot.");
+      return;
+    }
+
     try {
       setLoading(true);
 
@@ -56,6 +64,7 @@ const SendMessage = () => {
             Company: formData.companyName,
             Service: formData.service,
             Message: formData.message,
+            "g-recaptcha-response": captchaValue,
           }),
         }
       );
@@ -70,6 +79,7 @@ const SendMessage = () => {
           message: "",
           service: "",
         });
+        recaptchaRef.current?.reset();
         toast.success("Message sent successfully!");
       } else {
         toast.error("Error sending message. Please try again.");
@@ -80,6 +90,10 @@ const SendMessage = () => {
     } finally {
       setLoading(false);
     }
+  };
+
+  const handleCaptchaChange = (value: string | null) => {
+    setCaptchaValue(value);
   };
 
   return (
@@ -186,6 +200,12 @@ const SendMessage = () => {
                 value={formData.message}
                 onChange={(e) => handleInputChange("message", e.target.value)}
                 required
+              />
+
+              <ReCAPTCHA
+                sitekey="YOUR_SITE_KEY"
+                ref={recaptchaRef}
+                onChange={handleCaptchaChange}
               />
 
               <Button type="submit" className="w-full" disabled={loading}>
