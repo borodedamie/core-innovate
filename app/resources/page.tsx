@@ -8,7 +8,7 @@ const page = () => {
   return (
     <div className="space-y-16 pt-36">
       <div className="bg-dark hero h-[369px] flex items-center px-4 sm:px-8 lg:px-12">
-        <div className="relative text-white bg-cover bg-[url('/resources.png')] bg-center w-full flex flex-col gap-6">
+        <div className="relative text-white max-w-7xl mx-auto bg-cover bg-[url('/resources.png')] bg-center w-full flex flex-col gap-6">
           <SectionBadge title="blog" />
           <p className="text-4xl max-w-[600px] font-semibold font-dm-sans">
             News & Articles
