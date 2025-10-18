@@ -7,8 +7,8 @@ const Founder = () => {
     <div className="px-4 space-y-6 sm:px-8 max-w-7xl mx-auto lg:px-12">
       <SectionBadge title="Founder & Information Security Leader" />
 
-      <div className="grid lg:grid-cols-3 justify-center items-center gap-12">
-        <div className="space-y-6 lg:col-span-2">
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-12">
+        <div className="space-y-6 flex-1">
           <h3 className="title">About Mike Folley</h3>
 
           <div className="text-base text-secondary font-medium space-y-6">
@@ -48,14 +48,7 @@ const Founder = () => {
           </div>
         </div>
 
-        <div className="relative w-[356px] bg-center bg-cover aspect-square h-[488px] overflow-hidden rounded-2xl">
-          <Image
-            src="/mike.jpg"
-            alt="mike folorunsho"
-            fill
-            className="object-fill"
-          />
-        </div>
+        <div className="w-full lg:w-[386px] min-h-[488px] h-full rounded-2xl bg-[url('/mike.jpg')] bg-center sm:bg-position-[100%_15%] bg-cover" />
       </div>
     </div>
   );

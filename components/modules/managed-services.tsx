@@ -6,6 +6,7 @@ import { CircleCheck } from "lucide-react";
 const ManagedServices = () => {
   return (
     <div className="px-4 sm:px-8 space-y-12 lg:px-12">
+      <div className="space-y-12 max-w-7xl mx-auto">
       <div className="text-center">
         <h3 className="text-secondary text-[28px] font-semibold font-dm-sans">
           Managed IT Services
@@ -51,6 +52,7 @@ const ManagedServices = () => {
             ))}
           </ul>
         </div>
+      </div>
       </div>
     </div>
   );

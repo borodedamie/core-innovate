@@ -5,7 +5,8 @@ import { CircleCheck } from "lucide-react";
 
 const ManagedSecurity = () => {
   return (
-    <div className="px-4 sm:px-8 -mt-16 py-16 text-white space-y-12 bg-dark lg:px-12">
+    <div className="px-4 sm:px-8 -mt-16 py-16 text-white bg-dark lg:px-12">
+      <div className="space-y-12 max-w-7xl mx-auto">
       <div className="text-center">
         <h3 className=" text-[28px] font-semibold font-dm-sans">
           Managed Security (SOC AS-A-SERVICE)
@@ -46,6 +47,7 @@ const ManagedSecurity = () => {
             ))}
           </ul>
         </div>
+      </div>
       </div>
     </div>
   );

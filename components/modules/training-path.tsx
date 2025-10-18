@@ -5,7 +5,7 @@ import React from "react";
 
 const TrainingPath = () => {
   return (
-    <div className="px-4 sm:px-8 lg:px-12 space-y-12">
+    <div className="px-4 sm:px-8 max-w-7xl mx-auto lg:px-12 space-y-12">
       <div className="text-center">
         <h3 className="text-secondary text-[28px] font-semibold font-dm-sans">
           Training Path

@@ -5,7 +5,8 @@ import Link from "next/link";
 
 const WhatSetsUsApart = () => {
   return (
-    <div className="px-4 sm:px-8 lg:px-12 flex flex-col lg:flex-row items-center gap-12 py-16 bg-dark">
+    <div className="px-4 sm:px-8 lg:px-12 py-16 bg-dark">
+      <div className="flex flex-col max-w-7xl mx-auto lg:flex-row items-center gap-12">
       <div className="relative overflow-hidden rounded-2xl w-full h-[300px] sm:h-[400px] lg:h-[493px] flex-shrink-0 lg:w-1/2">
         <Image
           src="/training.png"
@@ -50,6 +51,7 @@ const WhatSetsUsApart = () => {
             <MoveRight />
           </Button>
         </Link>
+      </div>
       </div>
     </div>
   );

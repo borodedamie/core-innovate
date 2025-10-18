@@ -4,7 +4,7 @@ import Article from "../ui/article";
 
 const RecentArticles = () => {
   return (
-    <div className="px-4 space-y-6 sm:px-8 lg:px-12">
+    <div className="px-4 max-w-7xl mx-auto space-y-6 sm:px-8 lg:px-12">
       <div className="flex items-center gap-3">
         <h3 className="font-dm-sans text-2xl font-semibold text-black">
           Recent

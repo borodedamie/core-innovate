@@ -20,15 +20,9 @@ const page = () => {
         </div>
       </div>
 
-      <div className="relative h-[455px] rounded-t-2xl overflow-hidden -mt-24 bg-center">
-        <Image
-          className="object-cover"
-          alt="about us"
-          fill
-          src={`/about.jpg`}
-        />
-      </div>
-
+      <div 
+  className="relative h-[455px] bg-[url('/about.jpg')] rounded-t-2xl overflow-hidden -mt-24 bg-cover bg-center sm:bg-position-[100%_15%]"
+/>
       <OurVision />
       <OurMission />
       <Founder />

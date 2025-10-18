@@ -31,12 +31,12 @@ const NavBar = () => {
         <nav
           className={cn(
             "flex items-center bg-dark py-4 sm:pt-6 sm:pb-4 px-4 sm:px-8 lg:px-12 justify-between z-50",
-            { "bg-white shadow-2xs": location === "/contact-us" }
+            // { "bg-white shadow-2xs": location === "/contact-us" }
           )}
         >
           <Link href={`/`}>
             <Image
-              src={location === "/contact-us" ? `/logo-white.png` : `/logo.png`}
+              src={`/logo.png`}
               width={107}
               height={68}
               alt="core innovate logo"
@@ -46,7 +46,7 @@ const NavBar = () => {
           <div
             className={cn(
               "hidden lg:flex items-center text-base text-white font-dm-sans font-medium gap-8",
-              { "text-[#101928]": location === "/contact-us" }
+              // { "text-[#101928]": location === "/contact-us" }
             )}
           >
             {/* <Link className={linkClasses("/services")} href={"/services"}>
@@ -76,7 +76,7 @@ const NavBar = () => {
         <div
           className={cn(
             "bg-dark pb-4 shadow-2xs px-4 sm:px-8 lg:px-12 hidden lg:flex items-center gap-3 justify-end",
-            { "bg-white": location === "/contact-us" }
+            // { "bg-white": location === "/contact-us" }
           )}
         >
           {services.map((service) => (
@@ -84,10 +84,10 @@ const NavBar = () => {
               key={service}
               className={cn(
                 "text-md font-dm-sans hover:text-white hover:underline font-medium text-white/70",
-                {
-                  "text-[#101928]/70 hover:text-[#101928]":
-                    location === "/contact-us",
-                }
+                // {
+                //   "text-[#101928]/70 hover:text-[#101928]":
+                //     location === "/contact-us",
+                // }
               )}
               href={`/services`}
             >

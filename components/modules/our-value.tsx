@@ -21,9 +21,8 @@ const OurValues = () => {
         </div>
       </div>
 
-      <div className="relative w-full h-[488px] bg-center overflow-hidden rounded-2xl">
-        <Image src="/founder.jpg" fill className="object-cover" alt="Micheal Folorunsho"/>
-      </div>
+<div className="h-[488px] bg-[url('/founder.jpg')] rounded-2xl bg-cover"/>
+      
     </div>
   );
 };

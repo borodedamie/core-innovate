@@ -8,6 +8,7 @@ const CloudManagementServices = () => {
     <div className="px-4 sm:px-8 bg-[#F5F5F5] relative py-16 space-y-12 lg:px-12">
       <div className="absolute inset-0 bg-[url('/vector-white.png')] bg-center bg-cover bg-no-repeat" />
 
+      <div className="space-y-12 mx-auto max-w-7xl">
       <div className="text-center">
         <h3 className="text-secondary max-w-[486px] mx-auto text-[28px] font-semibold font-dm-sans">
           Cloud Management Services (Microsoft Azure & AWS)
@@ -38,6 +39,7 @@ const CloudManagementServices = () => {
         <div className="relative h-[462px] sm:h-full rounded-2xl overflow-hidden">
           <Image fill className="object-cover" alt="team" src={`/new-cloud.png`} />
         </div>
+      </div>
       </div>
     </div>
   );
