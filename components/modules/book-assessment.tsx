@@ -5,7 +5,8 @@ import Link from "next/link";
 
 const BookAssessment = () => {
   return (
-    <div className="relative bg-dark rounded-3xl mx-auto max-w-7xl px-4 h-[397px] flex items-center overflow-hidden">
+    <div className="max-w-7xl mx-auto px-4">
+      <div className="relative bg-dark rounded-3xl h-[397px] flex items-center overflow-hidden">
       <div className="absolute inset-0 bg-[url('/vector-2.png')] bg-center bg-cover bg-no-repeat" />
 
       <div className="relative text-white text-center w-full flex flex-col items-center gap-6">
@@ -25,6 +26,7 @@ const BookAssessment = () => {
         </Button>
         </Link>
       </div>
+    </div>
     </div>
   );
 };
