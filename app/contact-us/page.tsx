@@ -7,7 +7,7 @@ import Image from "next/image";
 const page = () => {
   return (
     <div className="pt-48 space-y-16">
-      <div className="flex flex-col gap-y-6 px-4 items-center">
+      <div className="flex flex-col gap-y-6 max-w-7xl mx-auto px-4 items-center">
         <SectionBadge title="CONTACT US" />
         <div className="text-center">
           <h3 className="title">Get In Touch</h3>
