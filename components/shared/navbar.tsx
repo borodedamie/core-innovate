@@ -70,7 +70,7 @@ const NavBar = () => {
                 <Hamburger
                   toggled={isOpen}
                   toggle={setIsOpen}
-                  color={location === "/contact-us" ? "#101928" : "#fff"}
+                  color={"#fff"}
                   size={24}
                 />
               </div>
